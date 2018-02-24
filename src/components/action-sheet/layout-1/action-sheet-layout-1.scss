@@ -1,0 +1,121 @@
+// /*  #Style Parallax Basic
+// ===========================================*/
+
+action-sheet-layout-1 {
+    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before,
+    .header-ios::after, .tabs-ios[tabsPlacement="top"] > .tabbar::after, .footer-ios::before, .tabs-ios[tabsPlacement="bottom"] > .tabbar::before {
+      background-image: none;
+    }
+
+  @include settingAnimationHeader;
+  @-webkit-keyframes color-change {
+      0% {
+          color: theme-colors('textColors', 'primary');
+      }
+      100% {
+          color: theme-colors('textColors', 'accent-first') !important;
+      }
+  }
+
+
+
+  [button-action-shit] {
+    z-index: 99999;
+    right: 20px;
+    top: 56px;
+    border-radius: 50%;
+    padding: 20px 11px !important;
+  }
+
+
+  .active .back-button,
+  .active .toolbar-title {
+      animation-name: color-change;
+      animation-duration: 100ms;
+      color: theme-colors('textColors', 'accent-first') !important;
+  }
+
+  ion-badge {
+    color: theme-colors('mainColors', 'accent-first') !important;
+  }
+
+  .back-button,
+  .toolbar-title {
+      color: theme-colors('textColors', 'primary');
+
+  }
+
+  .scroll-content {
+    top: -56px;
+  }
+
+  [background-size] {
+    height: 66%;
+    position: relative;
+  }
+
+
+  // Settings Icon For Android
+  .item-md {
+    [button-action-shit] {
+      z-index: 99999;
+      background-color: transparent !important;
+      border-radius: 100%;
+      top: 60px;
+      right: -5px;
+      box-shadow: none;
+      padding: 0 !important;
+
+      ion-icon {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        display: inline-block;
+        color: #00bee4;
+        font-size: 30px;
+      }
+    }
+  }
+
+  ion-item {
+    .label-ios,
+    .label-md {
+      margin: 5px 0 !important;
+    }
+  }
+
+  ion-item-divider {
+    .label-ios,
+    .label-md {
+      margin: 10px 0 20px !important;
+    }
+
+    ion-badge {
+      position: absolute;
+      bottom: 12px;
+      right: 5px;
+    }
+  }
+  // New Category
+  [new-category] {
+    display: block;
+    font-size: 11px;
+    color: theme-colors('textColors', 'accent') !important;
+    margin-bottom: 5px;
+    text-transform: uppercase !important;
+  }
+  // Parallax Title
+  [parallax-title] {
+    color: theme-colors('textColors', 'accent') !important;
+    font-size: $h1-font-size !important;
+    text-transform: capitalize;
+  }
+  // Parallax Title
+  [parallax-subtitle] {
+    color: theme-colors('textColors', 'accent') !important;
+    font-size: $h5-font-size !important;
+    text-transform: capitalize;
+  }
+}

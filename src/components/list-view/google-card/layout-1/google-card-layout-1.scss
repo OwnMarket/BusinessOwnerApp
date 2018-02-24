@@ -1,0 +1,37 @@
+/*  #Style Styled cards
+================================================*/
+
+google-card-layout-1 {
+    .card-img {
+        width: 130px;
+        height: 220px;
+        position: relative;
+        margin-right: 10px;
+    }
+    [social] {
+        position: absolute;
+        right: 40px;
+        bottom: 15px;
+    }
+    [card-title] {
+        line-height: normal !important;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    [card-subtitle] {
+        margin: 0;
+    }
+    [card-body-text] {
+        padding-top: 30px;
+        margin-bottom: 25px;
+    }
+    .swiper-slide {
+        display: table;
+    }
+    .slide-zoom {
+        height: 220px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}

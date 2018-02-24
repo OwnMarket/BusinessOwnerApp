@@ -1,0 +1,21 @@
+/*  #Style Styled cards 2
+================================================*/
+google-card-layout-2 {
+    [card-image] {
+        position: relative;
+        @include darkening-blend-mode;
+        &::before {
+            z-index: 3;
+        }
+        img {
+            width: 100% !important;
+        }
+        [card-title] {
+            color: theme-colors('textColors', 'accent-first') !important;
+            position: absolute;
+            left: 16px;
+            bottom: 20px;
+            z-index: 999;
+        }
+    }
+}

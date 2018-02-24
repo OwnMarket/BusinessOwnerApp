@@ -1,0 +1,33 @@
+<!--- Theme Parallax Location Details -->
+<!--- Header Big Image-->
+<ion-header header-ios>
+    <ion-navbar transparent [ngClass]="{'active':isClassActive()}">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title *ngIf="data != null" text-left>{{data.headerTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content elastic-header>
+    <ion-item no-lines background-size id="elastic-header" [ngStyle]="{'background-image': 'url(' + headerImage + ')'}">
+        <div title-block *ngIf="data != null">
+            <span new-category>{{data.category}}</span>
+            <h1 parallax-title text-wrap>{{data.title}}</h1>
+        </div>
+    </ion-item>
+    <ion-item-group *ngIf="data != null">
+        <ion-item-divider no-lines>
+            <ion-avatar item-start>
+                <img [src]="data.avatar" />
+            </ion-avatar>
+            <h2 item-subtitle>{{data.subtitle}}</h2>
+            <button item-end ion-button default-button button-action-shit (click)="presentActionSheet(data)">
+                  <ion-icon name="{{data.shareIcon}}"></ion-icon>
+            </button>
+        </ion-item-divider>
+        <ion-item description no-margin no-lines *ngFor="let item of data.items;let i = index">
+            <p parallax-subtitle text-wrap>{{item.subtitle}}</p>
+        </ion-item>
+    </ion-item-group>
+</ion-content>

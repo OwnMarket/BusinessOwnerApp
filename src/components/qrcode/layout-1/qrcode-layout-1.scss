@@ -1,0 +1,10 @@
+/*  #Style Qrcode
+================================================*/
+qrcode-layout-1 {
+  ion-item {
+    padding-top: 20px;
+  }
+  ion-list > ion-item:nth-child(1) {
+    padding-top: 40px !important;
+  }
+}

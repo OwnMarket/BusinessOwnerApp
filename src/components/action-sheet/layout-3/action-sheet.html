@@ -1,0 +1,28 @@
+<ion-header header-ios>
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title *ngIf="data != null" text-left>{{data.headerTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <!--Theme Full Image Cards-->
+    <ion-grid no-padding *ngIf="data != null">
+        <ion-row *ngIf="data != null">
+            <ion-col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 *ngFor="let item of data.items;let i = index">
+              <ion-card (click)="onEvent('onItemClick', item, $event)">
+                <ion-item no-lines>
+                    <span new-category text-uppercase>{{item.category}}</span>
+                    <h2 card-title>{{item.title}}</h2>
+                    <h3 card-subtitle>{{item.subtitle}}</h3>
+                    <button ion-fixed ion-button default-button button-action-shit color="primary" button-action-shit (click)="presentActionSheet(data)">
+                      <ion-icon name="{{data.shareIcon}}"></ion-icon>
+                    </button>
+                </ion-item>
+                    <img images-filter [src]="item.image" />
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

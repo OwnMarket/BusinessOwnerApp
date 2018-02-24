@@ -1,0 +1,44 @@
+/*  #Theme Products + CTA footer
+===========================================*/
+swipe-to-dismiss-layout-2 {
+  ion-label {
+    min-height: 120px;
+    margin: 0 !important;
+  }
+
+  .label-ios {
+    min-height: 100px;
+  }
+
+  [item-top] {
+    margin-top: 15px;
+  }
+
+  [new-price] {
+    font-size: 18px !important;
+  }
+
+  [old-price] {
+    clear: both;
+    display: block;
+    margin-top: 60px;
+    font-weight: 300;
+    text-decoration: line-through;
+    color: theme-colors('textColors', 'secondary');
+    font-size: $h5-font-size;
+  }
+
+  .input-wrapper {
+    position: relative;
+
+    [item-subtitle] {
+      text-transform: capitalize;
+      position: absolute;
+      bottom: 10px;
+    }
+  }
+
+  ion-item-options {
+    border-bottom: 1px solid theme-colors('mainColors', 'secondary') !important;
+  }
+}

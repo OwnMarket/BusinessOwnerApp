@@ -1,0 +1,57 @@
+/*  #Style Small item + header
+================================================*/
+drag-and-drop-layout-1 {
+  [header-bcg] {
+    position: fixed;
+    z-index: 1;
+    width: inherit;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ion-icon {
+      display: block;
+      float: right;
+      margin-right: 10px;
+
+      &[icon-medium] {
+        color: theme-colors('textColors', 'primary') !important;
+        font-size: 30px !important;
+      }
+    }
+
+    [span-medium] {
+      font-size: 30px !important;
+    }
+
+    [header-title] {
+      color: theme-colors('textColors', 'accent-first') !important;
+    }
+
+    [header-subtitle] {
+      color: theme-colors('textColors', 'accent-first') !important;
+      text-transform: uppercase;
+    }
+  }
+
+  ion-list {
+    margin-top: 80px !important;
+    margin-bottom: 0 !important;
+
+    [item-subtitle] {
+      text-transform: capitalize;
+    }
+  }
+
+  .ion-md-menu:before {
+    content: "\eb2f";
+    font-family: "fontello";
+    color: theme-colors('mainColors', 'secondary') !important;
+    font-size: icon-size('icon-medium') !important;
+  }
+
+  .item-inner {
+    margin-left: 0 !important;
+  }
+}

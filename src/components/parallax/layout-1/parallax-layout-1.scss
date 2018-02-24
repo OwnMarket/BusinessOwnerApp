@@ -1,0 +1,22 @@
+/*  # Style Parallax Frends
+================================================*/
+parallax-layout-1 {
+    [background-size] {
+        @include darkening-blend-mode;
+        height: 250px;
+        position: relative;
+    }
+
+    [parallax-title] {
+        z-index: 9;
+        padding-top: 130px;
+        display: block;
+        position: relative;
+        margin: 0 45px;
+    }
+    [social] {
+        z-index: 99;
+        position: relative;
+        margin: 10px;
+    }
+}

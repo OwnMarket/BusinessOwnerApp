@@ -1,0 +1,31 @@
+/*  #Style Category 1 (Animals)
+===========================================*/
+image-gallery-layout-1 {
+  ion-card {
+    position: relative;
+    height: 150px;
+    width: 100% !important;
+  }
+
+  [gallery-title] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    @include gradient-accent (rgba(0, 190, 228, 0.5) 0%, rgba(0, 145, 210, 0.5) 100% );
+    bottom: 0;
+    min-height: 45px;
+    border-bottom: 1px solid transparent !important;
+
+    [item-title],[item-subtitle] {
+        color: theme-colors('textColors', 'accent-first') !important;
+    }
+
+    ion-icon {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+      font-size: icon-size('icon-small');
+    }
+  }
+}

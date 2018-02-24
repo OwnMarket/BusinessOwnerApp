@@ -1,0 +1,39 @@
+<!--- Theme Parallax Basic -->
+<ion-header header-ios>
+    <ion-navbar transparent [ngClass]="{'active':isClassActive()}">
+        <button ion-button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title *ngIf="data != null" text-left>{{data.headerTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content elastic-header>
+    <ion-item no-lines background-size id="elastic-header" [ngStyle]="{'background-image': 'url(' + headerImage + ')'}">
+        <button ion-fixed ion-button default-button button-action-shit (click)="presentActionSheet(data)">
+                <ion-icon *ngIf="data != null" name="{{data.shareIcon}}"></ion-icon>
+        </button>
+    </ion-item>
+    <!--Content-->
+    <ion-grid no-padding>
+        <ion-row *ngIf="data != null">
+            <ion-col col-12>
+                <ion-list no-margin>
+                    <ion-item-group *ngFor="let item of data.items" (click)="onEvent('onItemClick', item)">
+                        <ion-item-divider no-lines>
+                            <span new-category margin-top text-uppercase>{{item.category}}</span>
+                            <h2 parallax-title text-wrap>{{item.title}}</h2>
+                            <h3 parallax-subtitle text-wrap>{{item.subtitle}}</h3>
+                            <ion-badge transparent item-end text-uppercase class="badge-dark">{{item.button}}</ion-badge>
+                        </ion-item-divider>
+                        <ion-item no-lines no-margin>
+                            <p parallax-description text-wrap>{{item.description}}</p>
+                        </ion-item>
+                        <ion-item no-lines no-margin *ngFor="let productDescription of item.productDescriptions">
+                            <p parallax-description text-wrap>{{productDescription.description}}</p>
+                        </ion-item>
+                    </ion-item-group>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

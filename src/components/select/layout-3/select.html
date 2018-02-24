@@ -1,0 +1,6 @@
+<ion-item *ngIf="data != null">
+    <ion-label>{{data.title}}</ion-label>
+    <ion-select [(ngModel)]="data.selectedItem" multiple="false" interface="action-sheet">
+        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>
+    </ion-select>
+</ion-item>

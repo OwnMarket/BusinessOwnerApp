@@ -1,0 +1,79 @@
+/*  #Style Products + CTA header
+==========================================*/
+drag-and-drop-layout-2 {
+  [container-hearder-image] {
+    position: relative;
+    @include black-white-mode;
+    height: 140px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    ion-col {
+      z-index: 9999;
+      position: relative;
+
+      [span-large] {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+
+    [header-title] {
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    [header-subtitle] {
+      color: theme-colors('mainColors', 'secondary');
+      font-size: $text-font-size;
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  ion-item {
+    [span-medium] {
+      text-align: right;
+      margin-top: 5px;
+    }
+
+    .label-md {
+      margin: 0;
+    }
+
+    [span-medium] {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .input-wrapper {
+      position: relative;
+
+      [item-top] {
+        position: absolute;
+        top: 20px;
+        width: 100%;
+      }
+
+      [item-bottom] {
+        overflow: hidden;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+      }
+    }
+
+    [span-small] {
+      text-decoration: line-through;
+      font-weight: 300;
+    }
+
+    img {
+      min-width: 144px !important;
+      min-height: 144px !important;
+      margin-bottom: 1px;
+    }
+  }
+}

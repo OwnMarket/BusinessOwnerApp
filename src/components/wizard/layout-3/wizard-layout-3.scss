@@ -1,0 +1,47 @@
+/*  #Style Wizard Big image
+===========================================*/
+
+wizard-layout-3 {
+  [background-size] {
+    @include darkening-blend-mode;
+  }
+
+  [skip] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+  }
+
+  [navigation] {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -60px;
+    display: block;
+    z-index: 9;
+  }
+
+  [wizard-description] {
+    width: 300px;
+    margin: 0 auto;
+    z-index: 99;
+    position: relative;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 70px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: theme-colors('mainColors', 'accent');
+  }
+
+  .swiper-pagination-bullet {
+    background: theme-colors('mainColors', 'accent');
+  }
+
+  [button-clear] {
+    color: theme-colors('textColors', 'accent-first') !important;
+  }
+}

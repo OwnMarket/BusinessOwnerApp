@@ -1,0 +1,53 @@
+<!-- Menu Main Top  -->
+<ion-menu [content]="content"  *ngIf="params != null" persistent="true">
+    <ion-header  
+      header-background-image 
+      [ngStyle]="{'background-image': 'url(' + params.background + ')'}">
+            <ion-thumbnail>
+                <img [src]="params.image">
+            </ion-thumbnail>
+            <h2 item-title text-center>{{params.title}}</h2>
+    </ion-header>
+    <!-- Menu Main List -->
+    <ion-content main-menu>
+        <ion-list no-margin no-padding>
+          <button menuClose ion-item paddinge-left no-lines item-title 
+            (click)="openPage('HomePage')">
+              <ion-icon icon-small item-left>
+                  <i class="fa fa-home"></i>
+              </ion-icon>
+              Dashboard
+          </button>
+          <button menuClose ion-item paddinge-left no-lines item-title 
+            (click)="openPage('OffersPage')">
+              <ion-icon icon-small item-left>
+                  <i class="fa fa-user"></i>
+              </ion-icon>
+              My Offers
+          </button>
+          <button menuClose ion-item paddinge-left no-lines item-title 
+            (click)="openPage('InvestorsPage')">
+              <ion-icon icon-small item-left>
+                  <i class="fa fa-address-book"></i>
+              </ion-icon>
+              Investors
+          </button>
+          <button menuClose ion-item paddinge-left no-lines item-title 
+            (click)="openPage('HelpPage')">
+              <ion-icon icon-small item-left>
+                  <i class="fa fa-help"></i>
+              </ion-icon>
+              Help
+          </button>
+          <button menuClose ion-item paddinge-left no-lines item-title 
+            (click)="logout()">
+              <ion-icon icon-small item-left>
+                  <i class="fa fa-sign-out"></i>
+              </ion-icon>
+              Logout
+          </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" main #content swipeBackEnabled="false"></ion-nav>

@@ -1,0 +1,58 @@
+<!--- Theme Parallax Location Details -->
+<!--- Header Big Image-->
+<ion-content elastic-header has-header *ngIf="data != null">
+    <ion-item no-lines background-size id="elastic-header" [ngStyle]="{'background-image': 'url(' + data.headerImage + ')'}">
+    </ion-item>
+
+    <ion-grid no-padding>
+        <ion-row>
+            <!--Parallax Rateing-->
+            <ion-col col-12>
+                <ion-item no-lines header-bcg no-padding>
+                    <ion-icon text-center white *ngFor="let item of data.iconsStars;let i = index" (click)="onStarClass(data.iconsStars, i, $event)">
+                        <i icon-medium *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>
+                        <i icon-medium *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>
+                    </ion-icon>
+                    <div span-small text-center margin-bottom>{{data.reviews}}</div>
+                    <!--Parallax Title-->
+                    <h1 parallax-title text-center margin-top>{{data.title}}</h1>
+                    <!--- Social Share-->
+                    <div social text-right margin-top>
+                        <ion-icon icon-small white (click)="onEvent('onLike', data)">
+                            <i class="icon {{data.iconLike}}"></i>
+                        </ion-icon>
+                        <ion-icon icon-small white (click)="onEvent('onFavorite', data)">
+                            <i class="icon {{data.iconFavorite}}"></i>
+                        </ion-icon>
+                        <ion-icon icon-small white (click)="onEvent('onShare', data)">
+                            <i class="icon {{data.iconShare}}"></i>
+                        </ion-icon>
+                    </div>
+                </ion-item>
+            </ion-col>
+            <!--Content-->
+            <ion-col col-12>
+                <!--Info-->
+                <ion-item no-lines no-margin padding-right>
+                    <div info *ngFor="let item of data.items;let i = index">
+                        <span float-left>{{item.name}}</span>
+                        <p>{{item.value}}</p>
+                    </div>
+                </ion-item>
+                <!-- Description-->
+                <ion-item no-lines text-wrap no-margin padding-right>
+                    <h3 parallax-description>{{data.description}}</h3>
+                    <h3 parallax-description>{{data.description3}}</h3>
+                    <h3 parallax-description>{{data.description2}}</h3>
+                    <h3 parallax-description>{{data.description4}}</h3>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<!-- Fab Button -->
+<ion-fab #fab bottom right>
+    <button button-ion-fab ion-fab (click)="onEvent('onFab', data, $event)">
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-fab>

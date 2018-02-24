@@ -1,0 +1,45 @@
+/*  #Style Register + logo
+================================================*/
+register-layout-1 {
+  [default-background] {
+    background-image: url("../assets/images/background/29.jpg");
+    @include darkening-blend-mode;
+  }
+
+  img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .form {
+    background: #fff;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow-z2;
+    padding: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    .item-inner {
+      border-bottom-color: theme-colors('mainColors', 'primary') !important;
+      box-shadow: none !important;
+    }
+
+    [button-clear] {
+      margin-top: 15px;
+    }
+
+    [title] {
+      font-size: $h1-font-size;
+      color: theme-colors('textColors', 'primary');
+      text-transform: uppercase;
+      margin: 0 10px;
+    }
+  }
+
+  [logo] {
+    [button-clear] {
+      color: theme-colors('textColors', 'accent-first') !important;
+      font-weight: 300;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<ion-item *ngIf="data != null" no-lines>
+    <ion-label>{{data.title}}</ion-label>
+    <ion-select interface="popover" [(ngModel)]="data.selectedItemMonth" multiple="false">
+        <ion-option *ngFor="let item of data.itemsMonth; let i= index" [value]="item.id">{{item.title}}</ion-option>
+    </ion-select>
+
+    <ion-select interface="popover" [(ngModel)]="data.selectedItemYear" [multiple]="false">
+        <ion-option *ngFor="let item of data.itemsYears; let i= index" [value]="item.id">{{item.title}}</ion-option>
+    </ion-select>
+</ion-item>

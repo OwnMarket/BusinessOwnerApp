@@ -1,0 +1,20 @@
+/*  #Style Radio Button - With Avatars
+===========================================*/
+radio-button-layout-2 {
+  [header-title] {
+    font-weight: 100;
+  }
+  ion-item {
+    .input-wrapper {
+      display: block;
+
+      ion-label {
+        margin: 0 !important;
+
+        &[padding-top] {
+          padding-top: 25px;
+        }
+      }
+    }
+  }
+}

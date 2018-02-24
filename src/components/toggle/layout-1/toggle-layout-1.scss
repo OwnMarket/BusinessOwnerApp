@@ -1,0 +1,32 @@
+/*  #Style Toggle - With avatars
+===========================================*/
+toggle-layout-1 {
+  [header-title] {
+    font-weight: 100;
+  }
+  ion-item {
+    .input-wrapper {
+      display: block;
+
+      ion-label {
+        margin: 0 !important;
+
+        &[padding-top] {
+          padding-top: 25px;
+        }
+      }
+    }
+  }
+
+  // Settings gradient image
+  [gradient] {
+    opacity: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 72px;
+    width: 72px;
+    margin-right: 16px !important;
+    position: relative;
+    @include darkening-blend-mode;
+  }
+}

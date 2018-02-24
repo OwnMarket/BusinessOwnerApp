@@ -1,0 +1,108 @@
+// /*  #Style Parallax Location Details
+// ===========================================*/
+
+action-sheet-layout-2 {
+
+  .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before,
+  .header-ios::after, .tabs-ios[tabsPlacement="top"] > .tabbar::after, .footer-ios::before, .tabs-ios[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none;
+  }
+
+  [button-action-shit] {
+    z-index: 99999;
+    border-radius: 50%;
+    padding: 20px 11px !important;
+  }
+
+  // Settings Icon For Android
+  .item-md {
+    [button-action-shit] {
+      z-index: 99999;
+      background-color: transparent !important;
+      border-radius: 100%;
+      top: 5px;
+      right: -5px;
+      box-shadow: none;
+      padding: 0 !important;
+      margin-top: -10px;
+
+      ion-icon {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        display: inline-block;
+        color: #00bee4;
+        font-size: 30px;
+      }
+    }
+  }
+
+    @include settingAnimationHeader;
+    @-webkit-keyframes color-change {
+        0% {
+            color: theme-colors('mainColors', 'primary');
+        }
+        100% {
+            color: theme-colors('textColors', 'accent') !important;
+        }
+    }
+    .active .back-button,
+    .active .toolbar-title {
+        animation-name: color-change;
+        animation-duration: 400ms;
+        color: theme-colors('textColors', 'accent-first') !important;
+    }
+
+    .back-button,
+    .toolbar-title {
+        color: theme-colors('textColors', 'accent-first') !important;
+
+    }
+    .scroll-content {
+        top: -56px;
+    }
+    [background-size] {
+        height: 250px;
+        position: relative;
+        @include darkening-blend-mode;
+    }
+    ion-avatar {
+        min-width: 48px !important;
+        min-height: 48px !important;
+        img {
+            width: 48px !important;
+            height: 48px !important;
+        }
+    }
+    [title-block] {
+        position: absolute;
+        bottom: 0;
+        padding: 16px 25px 16px 0;
+        [new-category] {
+            color: theme-colors('textColors', 'accent-first');
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    }
+
+    ion-item-divider {
+        padding-bottom: 15px;
+    }
+
+    [parallax-title] {
+        font-size: $h2-font-size !important;
+        font-weight: 400;
+    }
+    [parallax-subtitle] {
+        color: theme-colors('textColors', 'accent');
+        font-size: $h4-font-size !important;
+        line-height: 20px;
+    }
+
+  [description] ion-label {
+    margin: 5px 0 !important;
+  }
+}

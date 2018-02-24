@@ -1,0 +1,32 @@
+/*  #Style Full Image Cards
+================================================*/
+
+google-card-layout-3 {
+    ion-card {
+        [card-title] {
+          position: absolute;
+          top: 36%;
+          width: 90%;
+          left: 5%;
+          z-index: 9;
+          color: theme-colors('textColors', 'accent-first') !important;
+        }
+
+        [card-subtitle] {
+          position: absolute;
+          bottom: 12%;
+          width: 90%;
+          left: 5%;
+          z-index: 9;
+          color: theme-colors('textColors', 'accent-first') !important;
+        }
+    }
+    [card-content] {
+      position: relative;
+      @include darkening-blend-mode;
+      border-radius: $border-radius !important;
+      &:before {
+          z-index: 3;
+      }
+    }
+}

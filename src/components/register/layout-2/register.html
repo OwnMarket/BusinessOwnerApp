@@ -1,0 +1,64 @@
+<!-- Themes Register + Image -->
+<ion-content has-header white-background>
+    <ion-grid *ngIf="data != null">
+        <ion-row wrap padding>
+            <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+                <!--Logo-->
+                <div logo>
+                    <img [src]="data.logo" *ngIf="data.logo != null" />
+                </div>
+                <!--End logo-->
+                <!--Form-->
+                <div class="form">
+                    <ion-item no-padding transparent>
+                        <!--Icon for username-->
+                        <ion-icon item-left>
+                            <i icon-small class="icon {{data.iconAccount}}"></i>
+                        </ion-icon>
+                        <!---Input field username-->
+                        <ion-label floating>{{data.username}}</ion-label>
+                        <ion-input required type="text" [(ngModel)]="username"></ion-input>
+                    </ion-item>
+                    <ion-item no-padding transparent>
+                        <!--Icon for password-->
+                        <ion-icon item-left>
+                            <i icon-small class="icon {{data.iconLock}}"></i>
+                        </ion-icon>
+                        <!---Input field password-->
+                        <ion-label floating>{{data.password}}</ion-label>
+                        <ion-input required type="password" [(ngModel)]="password"></ion-input>
+                    </ion-item>
+                    <ion-item no-padding transparent>
+                        <!--Icon for email-->
+                        <ion-icon item-left>
+                            <i icon-small class="icon {{data.iconEmail}}"></i>
+                        </ion-icon>
+                        <!---Input field email-->
+                        <ion-label floating>{{data.email}}</ion-label>
+                        <ion-input required type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required [(ngModel)]="email"></ion-input>
+                    </ion-item>
+                    <ion-item no-padding transparent>
+                        <!--Icon for country-->
+                        <ion-icon item-left>
+                            <i icon-small class="icon {{data.iconWeb}}"></i>
+                        </ion-icon>
+                        <!---Input field country-->
+                        <ion-label floating>{{data.country}}</ion-label>
+                        <ion-input required type="text" pattern="[a-zA-Z ]*" required [(ngModel)]="country"></ion-input>
+                    </ion-item>
+                    <ion-item no-padding transparent>
+                        <!--Icon for city-->
+                        <ion-icon item-left>
+                            <i icon-small class="icon {{data.iconCity}}"></i>
+                        </ion-icon>
+                        <!---Input field city-->
+                        <ion-label floating>{{data.city}}</ion-label>
+                        <ion-input required type="text" pattern="[a-zA-Z ]*" required [(ngModel)]="city"></ion-input>
+                    </ion-item>
+                    <!---Register button-->
+                    <button ion-button float-right clear button-clear (click)="onEvent('onRegister')">{{data.submit}}</button>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

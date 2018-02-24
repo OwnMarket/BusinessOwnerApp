@@ -1,0 +1,55 @@
+/*  #Style Parallax Location Details
+===========================================*/
+parallax-layout-4 {
+    [background-size] {
+        height: 250px;
+        position: relative;
+        z-index: 999;
+        @include darkening-blend-mode;
+    }
+    ion-thumbnail img {
+        border-radius: 50%;
+        margin: 0 auto 10px;
+        z-index: 5;
+        position: relative;
+    }
+    [parallax-title] {
+        z-index: 5;
+        position: relative;
+    }
+
+    [parallax-description] {
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    [info] {
+        margin-bottom: 5px;
+        display: block;
+        >[item-subtitle]:nth-child(1) {
+            font-weight: bold !important;
+            line-height: 18px;
+        }
+        span {
+          font-weight: 700;
+          font-size: 12px;
+          letter-spacing: 1px;
+          line-height: 20px;
+          margin-right: 5px;
+        }
+        p {
+          font-size: 12px;
+        }
+    }
+
+    [header-bcg] {
+      .item-inner {
+          padding: 0 !important;
+          text-align: center;
+      }
+      .label-md {
+          margin: 25px 8px 10px 0;
+      }
+
+    }
+
+}

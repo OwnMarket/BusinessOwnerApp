@@ -1,0 +1,15 @@
+<!--Themes Radio Button - Simple -->
+<ion-grid no-padding *ngIf="data != null">
+    <ion-list radio-group [(ngModel)]="data.selectedItem">
+        <!-- Header Title Top -->
+        <ion-list-header header-section no-margin>
+            <h1 header-title text-capitalize>{{data.title}}</h1>
+        </ion-list-header>
+        <!-- Content List -->
+        <ion-item no-lines *ngFor="let item of data.items; let i= index">
+            <!-- Content List Title -->
+            <ion-label item-title>{{item.title}}</ion-label>
+            <ion-radio [value]="item.id" (ionSelect)="onEvent('onSelect',item)"></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-grid>

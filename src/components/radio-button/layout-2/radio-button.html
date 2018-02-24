@@ -1,0 +1,21 @@
+<!--Themes Radio Button - With Avatars -->
+<ion-grid no-padding *ngIf="data != null">
+    <ion-list radio-group [(ngModel)]="data.selectedItem">
+        <!-- Header Title Top -->
+        <ion-list-header header-section no-margin>
+            <h1 header-title text-capitalize>{{data.title}}</h1>
+        </ion-list-header>
+        <!--Content -->
+        <ion-item no-lines *ngFor="let item of data.items; let i= index">
+            <!-- Content Avatar -->
+            <ion-avatar item-start>
+                <img images-filter [src]="item.avatar" />
+            </ion-avatar>
+            <!-- Content Title -->
+            <ion-label item-title padding-top>{{item.title}}</ion-label>
+            <!-- Content Subtitle -->
+            <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>
+            <ion-radio item-end [value]="item.id" (ionSelect)="onEvent('onSelect',item)" [checked]="item.isChecked"></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-grid>
