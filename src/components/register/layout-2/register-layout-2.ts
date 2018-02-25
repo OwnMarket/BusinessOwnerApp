@@ -13,6 +13,7 @@ export class RegisterLayout2 {
 
     username: string;
     password: string;
+    confirmPassword: string;
     country: string;
     city: string;
     email: string;
@@ -24,6 +25,7 @@ export class RegisterLayout2 {
             this.events[event]({
                 'username': this.username,
                 'password': this.password,
+                'confirmPassword': this.confirmPassword,
                 'country': this.country,
                 'city': this.city,
                 'email': this.email

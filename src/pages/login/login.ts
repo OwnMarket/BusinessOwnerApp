@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, MenuController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
+import { UserProvider } from '../../providers/user.provider';
+import { LoginModel } from '../../models/login.model';
 
 @Component({
   selector: 'page-login',
@@ -12,7 +14,8 @@ export class LoginPage {
 
   constructor(
     navCtrl: NavController, 
-    private menuCtrl: MenuController) {
+    private _menuCtrl: MenuController,
+    _userProvider: UserProvider) {
 
     this.params.data = {
       "username": "Username",
@@ -25,9 +28,13 @@ export class LoginPage {
 
     this.params.events = {
       onLogin: function (params) {
-          console.log('onLogin:' + JSON.stringify(params));
-          sessionStorage.setItem('logged', 'yes');
-          navCtrl.setRoot(HomePage);
+        var model = new LoginModel();
+        model.username = params.username;
+        model.password = params.password;
+
+        _userProvider.login(model).subscribe((res) => {
+          navCtrl.setRoot(HomePage)
+        });
       },
       onRegister: function (params) {
           navCtrl.push(RegisterPage);
@@ -40,10 +47,10 @@ export class LoginPage {
   }
 
   ionViewDidEnter() {
-    this.menuCtrl.enable(false);
+    this._menuCtrl.enable(false);
   }
 
   ionViewWillLeave() {
-    this.menuCtrl.enable(true);
+    this._menuCtrl.enable(true);
   }
 }
