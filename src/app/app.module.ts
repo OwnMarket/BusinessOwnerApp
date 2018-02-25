@@ -20,8 +20,9 @@ import { OffersPage } from '../pages/offers/offers';
 import { HelpPage } from '../pages/help/help';
 
 // Providers
-import { UserProvider } from '../providers/user.provider';
 import { AppConfigProvider } from '../providers/app-config.provider';
+import { UserProvider } from '../providers/user.provider';
+import { BusinessProvider } from '../providers/business.provider';
 
 @NgModule({
   declarations: [
@@ -60,8 +61,9 @@ import { AppConfigProvider } from '../providers/app-config.provider';
       provide: ErrorHandler, 
       useClass: IonicErrorHandler
     },
+    AppConfigProvider,
     UserProvider,
-    AppConfigProvider
+    BusinessProvider
   ]
 })
 export class AppModule {}
