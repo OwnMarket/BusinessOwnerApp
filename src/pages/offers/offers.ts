@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-offers',
@@ -7,9 +6,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class OffersPage {
 
-  constructor(
-    private navCtrl: NavController, 
-    private navParams: NavParams) {
+  constructor() {
   }
 
   ionViewDidLoad() {

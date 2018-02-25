@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { HomePage } from '../home/home';
 
@@ -11,8 +11,7 @@ export class RegisterPage {
   params: any = {};
 
   constructor(
-    private navCtrl: NavController, 
-    private navParams: NavParams,
+    navCtrl: NavController, 
     private menuCtrl: MenuController) {
 
     this.params.data = {
@@ -28,11 +27,11 @@ export class RegisterPage {
     };
 
     this.params.events = {
-      onRegister: function(params) {
-          navCtrl.setRoot(HomePage)
+      onRegister: function(params){
+        navCtrl.setRoot(HomePage)
       },
-      onSkip: function(params) {
-          navCtrl.push(LoginPage);
+      onSkip: function(params){
+        navCtrl.setRoot(LoginPage)
       }
     };
   }
@@ -42,12 +41,10 @@ export class RegisterPage {
   }
 
   ionViewDidEnter() {
-    // the root left menu should be disabled on this page
     this.menuCtrl.enable(false);
   }
 
   ionViewWillLeave() {
-    // enable the root left menu when leaving this page
     this.menuCtrl.enable(true);
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, MenuController } from 'ionic-angular';
+import { NavController, MenuController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 
@@ -11,8 +11,7 @@ export class LoginPage {
   params: any = {};
 
   constructor(
-    private navCtrl: NavController, 
-    private navParams: NavParams,
+    navCtrl: NavController, 
     private menuCtrl: MenuController) {
 
     this.params.data = {
@@ -41,12 +40,10 @@ export class LoginPage {
   }
 
   ionViewDidEnter() {
-    // the root left menu should be disabled on this page
     this.menuCtrl.enable(false);
   }
 
   ionViewWillLeave() {
-    // enable the root left menu when leaving this page
     this.menuCtrl.enable(true);
   }
 }
