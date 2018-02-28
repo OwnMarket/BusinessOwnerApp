@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserProvider } from '../../providers/user.provider';
 
 @Component({
   selector: 'page-profile',
@@ -6,10 +7,16 @@ import { Component } from '@angular/core';
 })
 export class ProfilePage {
 
-  constructor() {
-  }
+  constructor(
+    private _userProvider: UserProvider
+  ) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
+  ngOnInit(){
+    this._userProvider.getProfile()
+      .subscribe((data) => {
+        let profile = data;
+      }, (res) => {
+        console.log(res);
+      });
   }
 }

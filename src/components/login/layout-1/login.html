@@ -3,9 +3,9 @@
     <ion-grid *ngIf="data != null">
         <ion-row wrap padding>
             <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-                <!---Logo
-                <img [src]="data.logo" *ngIf="data.logo != null">
-                Input field username-->
+                <img float-left [src]="data.logo" *ngIf="data.logo != null">
+                
+                <!--Input field username-->
                 <ion-item no-padding transparent>
                     <ion-label floating>{{data.username}}</ion-label>
                     <ion-input required type="text" [(ngModel)]="username"></ion-input>

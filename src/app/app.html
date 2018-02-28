@@ -19,6 +19,20 @@
               Dashboard
           </button>
           <button menuClose ion-item paddinge-left no-lines item-title 
+            (click)="openPage('ProfilePage')">
+              <ion-icon icon-small item-left>
+                  <i class="fa fa-home"></i>
+              </ion-icon>
+              Profile
+          </button>
+          <button menuClose ion-item paddinge-left no-lines item-title 
+            (click)="openPage('BusinessProfilePage')">
+              <ion-icon icon-small item-left>
+                  <i class="fa fa-home"></i>
+              </ion-icon>
+              Business Profile
+          </button>
+          <button menuClose ion-item paddinge-left no-lines item-title 
             (click)="openPage('OffersPage')">
               <ion-icon icon-small item-left>
                   <i class="fa fa-user"></i>

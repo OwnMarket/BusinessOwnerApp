@@ -4,6 +4,7 @@ import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { UserProvider } from '../../providers/user.provider';
 import { LoginModel } from '../../models/login.model';
+import { ToastMessageProvider } from '../../providers/toast-message.provider';
 
 @Component({
   selector: 'page-login',
@@ -13,9 +14,10 @@ export class LoginPage {
   params: any = {};
 
   constructor(
-    navCtrl: NavController, 
+    private navCtrl: NavController, 
     private _menuCtrl: MenuController,
-    _userProvider: UserProvider) {
+    private _userProvider: UserProvider,
+    private _toastr: ToastMessageProvider) {
 
     this.params.data = {
       "username": "Username",
@@ -32,18 +34,19 @@ export class LoginPage {
         model.username = params.username;
         model.password = params.password;
 
-        _userProvider.login(model).subscribe((res) => {
-          navCtrl.setRoot(HomePage)
-        });
+        _userProvider
+          .login(model)
+          .subscribe((res) => {
+            navCtrl.setRoot(HomePage)
+          }, (res) => {
+            _toastr.showMessage("Wrong credentials!");
+            console.log(res);
+          });
       },
       onRegister: function (params) {
           navCtrl.push(RegisterPage);
       }
     };
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
   }
 
   ionViewDidEnter() {
@@ -52,5 +55,11 @@ export class LoginPage {
 
   ionViewWillLeave() {
     this._menuCtrl.enable(true);
+  }
+
+  ngOnInit(){
+    if(this._userProvider.getToken()){
+      this.navCtrl.setRoot(HomePage);
+    }
   }
 }

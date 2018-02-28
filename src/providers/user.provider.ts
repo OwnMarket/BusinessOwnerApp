@@ -9,6 +9,7 @@ import { UserRegistrationModel } from '../models/user-registration.model';
 import { UserRegistrationStepTwoModel } from '../models/user-registration-step-two.model';
 import { ChangePasswordModel } from '../models/change-password.model';
 import { UserProfileModel } from '../models/user-profile.model';
+import { ToastMessageProvider } from './toast-message.provider';
 
 @Injectable()
 export class UserProvider {
@@ -30,6 +31,15 @@ export class UserProvider {
             'Content-Type': 'application/x-www-form-urlencoded'
           }
         })
+        .map((res: any) => {
+          sessionStorage.setItem('access_token', res.access_token);
+          return true;
+        });
+  }
+
+  logout(): boolean{
+    sessionStorage.removeItem('access_token');
+    return true;
   }
 
   register(model: UserRegistrationModel): Observable<any> {
@@ -50,11 +60,18 @@ export class UserProvider {
   getProfile(): Observable<any> {
     return this.http
       .get(this._resourceUrl + 'profile')
+      .map((res: any) => {
+        return res.data;
+      });
   }
 
   updateProfile(model: UserProfileModel): Observable<any> {
     return this.http
       .post(this._resourceUrl + 'profile', model)
+  }
+
+  getToken(): string{
+    return sessionStorage.getItem('access_token');
   }
 
   private encodeParams(params: any): string {  

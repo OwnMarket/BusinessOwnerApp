@@ -8,6 +8,9 @@ import { HomePage } from '../pages/home/home';
 import { ProfilePage } from '../pages/profile/profile';
 import { InvestorsPage } from '../pages/investors/investors';
 import { OffersPage } from '../pages/offers/offers';
+import { UserProvider } from '../providers/user.provider';
+import { HelpPage } from '../pages/help/help';
+import { BusinessProfilePage } from '../pages/business-profile/business-profile';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,6 +21,7 @@ export class BusinessOwnerApp {
   params: any;
 
   constructor(
+    private _userProvider: UserProvider,
     platform: Platform, 
     statusBar: StatusBar, 
     splashScreen: SplashScreen) {
@@ -34,6 +38,7 @@ export class BusinessOwnerApp {
   }
 
   logout(){
+    this._userProvider.logout();
     this.nav.setRoot(LoginPage);
   }
   
@@ -45,11 +50,17 @@ export class BusinessOwnerApp {
       case ProfilePage.name:
         this.nav.push(ProfilePage);
         break;
+      case BusinessProfilePage.name:
+        this.nav.push(BusinessProfilePage);
+        break;
       case InvestorsPage.name:
         this.nav.push(InvestorsPage);
         break;
       case OffersPage.name:
         this.nav.push(OffersPage);
+        break;
+      case HelpPage.name:
+        this.nav.push(HelpPage);
         break;
       default:
         this.nav.popToRoot();

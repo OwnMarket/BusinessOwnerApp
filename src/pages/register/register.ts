@@ -4,6 +4,8 @@ import { LoginPage } from '../login/login';
 import { HomePage } from '../home/home';
 import { UserProvider } from '../../providers/user.provider';
 import { UserRegistrationModel } from '../../models/user-registration.model';
+import { LoginModel } from '../../models/login.model';
+import { RegisterStep2Page } from '../register-step2/register-step2';
 
 @Component({
   selector: 'page-register',
@@ -18,6 +20,7 @@ export class RegisterPage {
     userProvider: UserProvider) {
 
     this.params.data = {
+      "register": "Join Chainium",
       "logo": "assets/images/logo/logo.gif",
       "iconAccount": "icon-account",
       "username": "Username",
@@ -44,7 +47,15 @@ export class RegisterPage {
 
           userProvider.register(registerModel)
             .subscribe((res) => {
-              navCtrl.setRoot(HomePage)
+              // Auto login after successfull registration
+              let loginModel = new LoginModel();
+              loginModel.username = registerModel.email;
+              loginModel.password = registerModel.password;
+
+              userProvider.login(loginModel)
+                .subscribe((res) => {
+                  navCtrl.setRoot(RegisterStep2Page)
+                });
             });
         }
       },
