@@ -21,6 +21,7 @@ import { BusinessProfilePage } from '../pages/business-profile/business-profile'
 import { InvestorsPage } from '../pages/investors/investors';
 import { OffersPage } from '../pages/offers/offers';
 import { HelpPage } from '../pages/help/help';
+import { TokensPage } from '../pages/tokens/tokens';
 
 // Providers
 import { AppConfigProvider } from '../providers/app-config.provider';
@@ -28,6 +29,7 @@ import { UserProvider } from '../providers/user.provider';
 import { BusinessProvider } from '../providers/business.provider';
 import { TokenInterceptor } from './token.interceptor';
 import { ToastMessageProvider } from '../providers/toast-message.provider';
+import { TokenProvider } from '../providers/token.provider';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { ToastMessageProvider } from '../providers/toast-message.provider';
     BusinessProfilePage,
     InvestorsPage,
     OffersPage,
-    HelpPage   
+    HelpPage,
+    TokensPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +65,8 @@ import { ToastMessageProvider } from '../providers/toast-message.provider';
     BusinessProfilePage,
     InvestorsPage,
     OffersPage,
-    HelpPage
+    HelpPage,
+    TokensPage
   ],
   providers: [
     StatusBar,
@@ -79,7 +83,8 @@ import { ToastMessageProvider } from '../providers/toast-message.provider';
     AppConfigProvider,
     UserProvider,
     BusinessProvider,
-    ToastMessageProvider
+    ToastMessageProvider,
+    TokenProvider
   ]
 })
 export class AppModule {}

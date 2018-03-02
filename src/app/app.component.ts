@@ -11,6 +11,7 @@ import { OffersPage } from '../pages/offers/offers';
 import { UserProvider } from '../providers/user.provider';
 import { HelpPage } from '../pages/help/help';
 import { BusinessProfilePage } from '../pages/business-profile/business-profile';
+import { TokensPage } from '../pages/tokens/tokens';
 
 @Component({
   templateUrl: 'app.html'
@@ -52,6 +53,9 @@ export class BusinessOwnerApp {
         break;
       case BusinessProfilePage.name:
         this.nav.push(BusinessProfilePage);
+        break;
+      case TokensPage.name:
+        this.nav.push(TokensPage);
         break;
       case InvestorsPage.name:
         this.nav.push(InvestorsPage);
