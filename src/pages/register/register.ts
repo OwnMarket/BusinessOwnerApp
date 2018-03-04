@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, MenuController } from 'ionic-angular';
+import { NavController, MenuController, IonicPage } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { HomePage } from '../home/home';
 import { UserProvider } from '../../providers/user.provider';
@@ -7,6 +7,7 @@ import { UserRegistrationModel } from '../../models/user-registration.model';
 import { LoginModel } from '../../models/login.model';
 import { RegisterStep2Page } from '../register-step2/register-step2';
 
+@IonicPage()
 @Component({
   selector: 'page-register',
   templateUrl: 'register.html',

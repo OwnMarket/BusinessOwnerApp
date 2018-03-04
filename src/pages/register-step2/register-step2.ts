@@ -12,7 +12,7 @@ import { ToastMessageProvider } from '../../providers/toast-message.provider';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-
+@IonicPage()
 @Component({
   selector: 'page-register-step2',
   templateUrl: 'register-step2.html',
