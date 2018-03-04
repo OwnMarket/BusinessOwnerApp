@@ -1,36 +1,27 @@
+<ion-split-pane when="md">
 <!-- Menu Main Top  -->
 <ion-menu [content]="content"  *ngIf="params != null" persistent="true">
     <ion-header  
       header-background-image 
       [ngStyle]="{'background-image': 'url(' + params.background + ')'}">
-            <ion-thumbnail>
-                <img [src]="params.image">
-            </ion-thumbnail>
-            <h2 item-title text-center>{{params.title}}</h2>
+             <ion-thumbnail>
+                    <img [src]="params.image">
+                </ion-thumbnail>
+            <a href="javascript:;" 
+                (click)="openPage('BusinessProfilePage')" 
+                item-title menuClose text-center>
+                {{params.title}}
+            </a>
     </ion-header>
     <!-- Menu Main List -->
     <ion-content main-menu>
         <ion-list no-margin no-padding>
           <button menuClose ion-item paddinge-left no-lines item-title 
-            (click)="openPage('HomePage')">
+            (click)="openPage('AccountPage')">
               <ion-icon icon-small item-left>
                   <i class="fa fa-home"></i>
               </ion-icon>
-              Dashboard
-          </button>
-          <button menuClose ion-item paddinge-left no-lines item-title 
-            (click)="openPage('ProfilePage')">
-              <ion-icon icon-small item-left>
-                  <i class="fa fa-home"></i>
-              </ion-icon>
-              Profile
-          </button>
-          <button menuClose ion-item paddinge-left no-lines item-title 
-            (click)="openPage('BusinessProfilePage')">
-              <ion-icon icon-small item-left>
-                  <i class="fa fa-home"></i>
-              </ion-icon>
-              Business Profile
+              Account
           </button>
           <button menuClose ion-item paddinge-left no-lines item-title 
             (click)="openPage('TokensPage')">
@@ -72,3 +63,4 @@
 </ion-menu>
 
 <ion-nav [root]="rootPage" main #content swipeBackEnabled="false"></ion-nav>
+</ion-split-pane>

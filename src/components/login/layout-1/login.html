@@ -3,7 +3,10 @@
     <ion-grid *ngIf="data != null">
         <ion-row wrap padding>
             <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-                <img float-left [src]="data.logo" *ngIf="data.logo != null">
+                
+                <div logo>
+                    <img [src]="data.logo" *ngIf="data.logo != null" />
+                </div>
                 
                 <!--Input field username-->
                 <ion-item no-padding transparent>

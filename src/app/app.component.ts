@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
-import { ProfilePage } from '../pages/profile/profile';
+import { AccountPage } from '../pages/account/account';
 import { InvestorsPage } from '../pages/investors/investors';
 import { OffersPage } from '../pages/offers/offers';
 import { UserProvider } from '../providers/user.provider';
@@ -31,9 +31,9 @@ export class BusinessOwnerApp {
         statusBar.styleDefault();
         splashScreen.show();
         this.params = {
-          "background": "", //TODO
-          "image": "assets/images/logo/logo.gif",
-          "title": ""
+          "background": "assets/images/25.jpg",
+          "image": "assets/images/header-logo.png",
+          "title": "Big City Coffee Co"
         };
     });
   }
@@ -48,8 +48,8 @@ export class BusinessOwnerApp {
       case HomePage.name:
         this.nav.setRoot(HomePage);
         break;
-      case ProfilePage.name:
-        this.nav.push(ProfilePage);
+      case AccountPage.name:
+        this.nav.push(AccountPage);
         break;
       case BusinessProfilePage.name:
         this.nav.push(BusinessProfilePage);

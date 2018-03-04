@@ -32,9 +32,7 @@ export class RegisterStep2Page {
       "logo": "assets/images/logo/logo.gif",
       "firstName": "First name",
       "lastName": "Last name",
-      "dateOfBirth": "Date of birth",
-      "country": "Country",
-      "companyPosition": "Company position",
+      "businessName": "Business name",
       "submit": "Save",
       "skip": "Skip"
     }
