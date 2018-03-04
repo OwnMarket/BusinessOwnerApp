@@ -16,7 +16,6 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { RegisterStep2Page } from '../pages/register-step2/register-step2';
-import { AccountPage } from '../pages/account/account';
 import { BusinessProfilePage } from '../pages/business-profile/business-profile';
 import { InvestorsPage } from '../pages/investors/investors';
 import { OffersPage } from '../pages/offers/offers';
@@ -30,9 +29,7 @@ import { BusinessProvider } from '../providers/business.provider';
 import { TokenInterceptor } from './token.interceptor';
 import { ToastMessageProvider } from '../providers/toast-message.provider';
 import { TokenProvider } from '../providers/token.provider';
-import { TabsLayout3Module } from '../components/tabs/layout-3/tabs-layout-3.module';
-import { ProfilePageModule } from '../pages/account/profile/profile.module';
-import { SecuritySettingsPageModule } from '../pages/account/security-settings/security-settings.module';
+import { AccountPageModule } from '../pages/account/account.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +38,6 @@ import { SecuritySettingsPageModule } from '../pages/account/security-settings/s
     LoginPage,
     RegisterPage,
     RegisterStep2Page,
-    AccountPage,
     BusinessProfilePage,
     InvestorsPage,
     OffersPage,
@@ -55,9 +51,7 @@ import { SecuritySettingsPageModule } from '../pages/account/security-settings/s
     LoginLayout1Module,
     RegisterLayout2Module,
     RegisterLayout1Module,
-    ProfilePageModule,
-    SecuritySettingsPageModule,
-    TabsLayout3Module,
+    AccountPageModule,
     IonicModule.forRoot(BusinessOwnerApp)
   ],
   bootstrap: [IonicApp],
@@ -67,7 +61,6 @@ import { SecuritySettingsPageModule } from '../pages/account/security-settings/s
     LoginPage,
     RegisterPage,
     RegisterStep2Page,
-    AccountPage,
     BusinessProfilePage,
     InvestorsPage,
     OffersPage,
