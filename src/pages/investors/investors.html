@@ -4,6 +4,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding="true">
-  Investors
+<ion-content>
+  <p text-center>Big City Coffee Co investor distribution</p>
+  <div style="display: block">
+    <canvas baseChart
+            [data]="chartModel.doughnutChartData"
+            [labels]="chartModel.doughnutChartLabels"
+            [legend]="false"
+            [chartType]="chartModel.doughnutChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)">
+    </canvas>
+  </div>
+  <p text-center>Big City Coffee Co top investors</p>
+  <google-card-layout-1 
+        [data]="params.data">
+  </google-card-layout-1>
 </ion-content>

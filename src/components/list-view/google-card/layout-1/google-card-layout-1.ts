@@ -42,9 +42,4 @@ export class GoogleCardLayout1 {
             this.events[event](item);
         }
     }
-    ngAfterViewInit() {
-        this.content.ionScroll.subscribe((d) => {
-            this.fabButton.setElementClass("fab-button-out", d.directionY == "down");
-        });
-    }
 }
