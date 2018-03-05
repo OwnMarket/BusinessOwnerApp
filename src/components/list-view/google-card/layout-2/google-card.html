@@ -1,5 +1,5 @@
 <!--Theme Styled cards 2-->
-<ion-content has-header>
+<ion-content>
     <ion-grid no-padding *ngIf="data != null">
         <ion-row>
             <ion-col col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 *ngFor="let item of data.items;let i = index">
@@ -12,14 +12,18 @@
                         <ion-card-title>
                             <h1 card-subtitle>{{item.title}}</h1>
                         </ion-card-title>
-                        <p card-body-text>{{item.description}}</p>
+                        <div class="progressBar">
+                            <div class="loader" style="width: 30%;">
+                                <p class="percent">30%</p>
+                            </div>
+                        </div>
                     </ion-card-content>
-                    <button ion-button margin button-clear-outline round outline medium float-left (click)="onEvent('onShare', item, $event)">
-            {{item.shareButton}}
-          </button>
-                    <button ion-button margin-bottom margin-top button-clear-outline round outline medium float-left (click)="onEvent('onExplore', item, $event)">
-            {{item.button}}
-          </button>
+                    <button ion-button 
+                        margin-bottom margin-top margin-right button-clear-outline 
+                        round outline medium float-right 
+                        (click)="onEvent('onExplore', item, $event)">
+                        {{item.button}}
+                    </button>
                 </ion-card>
             </ion-col>
         </ion-row>
@@ -27,7 +31,7 @@
 </ion-content>
 <!--Fab Button-->
 <ion-fab #fab bottom right>
-    <button button-ion-fab ion-fab (click)="onEvent('onFab', data, $event)">
-    <ion-icon name="add"></ion-icon>
-  </button>
+        <button button-ion-fab ion-fab (click)="onEvent('onFab', data, $event)">
+        <ion-icon name="add"></ion-icon>
+      </button>
 </ion-fab>

@@ -7,7 +7,7 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { AccountPage } from '../pages/account/account';
 import { InvestorsPage } from '../pages/investors/investors';
-import { OffersPage } from '../pages/offers/offers';
+import { OfferListPage } from '../pages/offer-list/offer-list';
 import { UserProvider } from '../providers/user.provider';
 import { HelpPage } from '../pages/help/help';
 import { BusinessProfilePage } from '../pages/business-profile/business-profile';
@@ -60,8 +60,8 @@ export class BusinessOwnerApp {
       case InvestorsPage.name:
         this.nav.push(InvestorsPage);
         break;
-      case OffersPage.name:
-        this.nav.push(OffersPage);
+      case OfferListPage.name:
+        this.nav.push(OfferListPage);
         break;
       case HelpPage.name:
         this.nav.push(HelpPage);

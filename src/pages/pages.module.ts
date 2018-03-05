@@ -9,7 +9,7 @@ import { BusinessProfilePageModule } from '../pages/business-profile/business-pr
 import { HelpPageModule } from '../pages/help/help.module';
 import { HomePageModule } from '../pages/home/home.module';
 import { InvestorsPageModule } from '../pages/investors/investors.module';
-import { OffersPageModule } from '../pages/offers/offers.module';
+import { OfferListPageModule } from '../pages/offer-list/offer-list.module';
 import { TokensPageModule } from '../pages/tokens/tokens.module';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { TokensPageModule } from '../pages/tokens/tokens.module';
     HelpPageModule,
     HomePageModule,
     InvestorsPageModule,
-    OffersPageModule,
+    OfferListPageModule,
     TokensPageModule,
     LoginPageModule,
     RegisterPageModule,
@@ -33,7 +33,7 @@ import { TokensPageModule } from '../pages/tokens/tokens.module';
     HelpPageModule,
     HomePageModule,
     InvestorsPageModule,
-    OffersPageModule,
+    OfferListPageModule,
     TokensPageModule,
     LoginPageModule,
     RegisterPageModule,

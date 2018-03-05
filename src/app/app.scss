@@ -59,4 +59,21 @@
       padding-left: 30px !important;
     }
   }
+
+  .progressBar{
+    width: 100%;
+    background-color: #f20d49;
+    border-radius:100px;
+  }
+
+  .loader{
+    background: #0091D2 !important;
+    border-radius:100px;
+    height:20px;
+    p{
+      text-align:center;
+      color:white !important;
+      text-align:center;
+    }
+  }
   
