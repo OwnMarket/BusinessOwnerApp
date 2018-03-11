@@ -26,7 +26,7 @@ export class LoginPage {
       "register": "Register",
       "login": "Login",
       "skip": "Skip",
-      "logo": "assets/images/logo/logo.gif"
+      "logo": "assets/images/logo/chainium.png"
     }
 
     this.params.events = {

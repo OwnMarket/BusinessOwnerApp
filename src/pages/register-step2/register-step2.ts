@@ -29,7 +29,7 @@ export class RegisterStep2Page {
 
     this.params.data = {
       "register": "Finish your registration",
-      "logo": "assets/images/logo/logo.gif",
+      "logo": "assets/images/logo/chainium.png",
       "firstName": "First name",
       "lastName": "Last name",
       "businessName": "Business name",

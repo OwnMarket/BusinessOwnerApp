@@ -65,23 +65,23 @@ $text-font-size: 12px;
 ================================================*/
 $palettes: (
     mainColors: ( // Also used for backgrounds.
-        primary:   #0090d0, // Used for toolbars
+        primary:   #ec6608, // Used for toolbars
         secondary:  #f7f7f7, // Used for various small elements
-        secondary-first:  #0091D2, // Used for gradient
+        secondary-first:  #ec6608, // Used for gradient
         accent:   #ffffff, //Used for icon-search-bar, loaders-spinners, checkbox-item, icon, button, span, input-field-icons
-        accent-first: #00c0e8,
-        accent-other: #00bee4, // Used for gradient
+        accent-first: #ec6608,
+        accent-other: #ec6608, // Used for gradient
     ),
 
     textColors: ( // Used for text colors in all screens
-        primary: #00c0e8, // Used for text colors in: item-title, item-subtitle, header-title, header-subtitle
-        secondary: #0090d0, // Used for text colors in: buttons, header-title, subitem-title, subitem-subtitle
+        primary: #ec6608, // Used for text colors in: item-title, item-subtitle, header-title, header-subtitle
+        secondary: #ec6608, // Used for text colors in: buttons, header-title, subitem-title, subitem-subtitle
         accent:   #455B65, // Used for text colors in: header-title, header-subtitle
         accent-first: #ffffff,
     ),
     blendModes: ( // Used for blend modes
         primary:  #ffffff,
-        secondary: #0090d0
+        secondary: #ec6608
     )
 );
 
@@ -164,6 +164,14 @@ $color-2: theme-colors('mainColors', 'secondary-first');
     }
   }
 
+  ion-app{
+    background-color: black;
+  }
+
+  ion-content{
+    background-color: black;
+  }
+
   ion-navbar {
     background-color: transparent;
     animation-name: headerOff;
@@ -178,9 +186,9 @@ $color-2: theme-colors('mainColors', 'secondary-first');
     }
 
     to {
-      background-color: #00bee4;
-      background-color: -webkit-gradient(linear, right top, left top, from(#00bee4), to(#0091d2));
-      background-color: linear-gradient(to left, #00bee4 0%, #0091d2 100%);
+      background-color: #ec6608;
+      background-color: -webkit-gradient(linear, right top, left top, from(#ec6608), to(#ec6302));
+      background-color: linear-gradient(to left, #ec6608 0%, #ec6302 100%);
     }
   }
 

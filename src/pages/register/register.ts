@@ -22,7 +22,7 @@ export class RegisterPage {
 
     this.params.data = {
       "register": "Join Chainium",
-      "logo": "assets/images/logo/logo.gif",
+      "logo": "assets/images/logo/chainium.png",
       "iconAccount": "icon-account",
       "username": "Username",
       "iconHome": "icon-home-variant",
