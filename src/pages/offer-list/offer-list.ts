@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import { OfferProvider } from '../../providers/offer.provider';
+import { OfferPage } from '../offer/offer';
 
 @IonicPage()
 @Component({
@@ -10,15 +11,17 @@ import { OfferProvider } from '../../providers/offer.provider';
 export class OfferListPage {
   params: any = {};
 
-  constructor(offerProvider: OfferProvider) {
+  constructor(
+    navCtrl: NavController,
+    offerProvider: OfferProvider) {
     this.params.data = offerProvider.getOffers();
 
     this.params.events = {
         'onItemClick': function (item: any) {
-            console.log(item);
+            navCtrl.push(OfferPage);
         },
         'onExplore': function (item: any) {
-            this
+            navCtrl.push(OfferPage);
         }
     };
   }

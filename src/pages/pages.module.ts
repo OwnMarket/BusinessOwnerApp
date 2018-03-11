@@ -11,6 +11,8 @@ import { HomePageModule } from '../pages/home/home.module';
 import { InvestorsPageModule } from '../pages/investors/investors.module';
 import { OfferListPageModule } from '../pages/offer-list/offer-list.module';
 import { TokensPageModule } from '../pages/tokens/tokens.module';
+import { OfferListPage } from './offer-list/offer-list';
+import { OfferPageModule } from './offer/offer.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { TokensPageModule } from '../pages/tokens/tokens.module';
     LoginPageModule,
     RegisterPageModule,
     RegisterStep2PageModule,
+    OfferPageModule
   ],
   exports:[
     AccountPageModule,
@@ -38,6 +41,7 @@ import { TokensPageModule } from '../pages/tokens/tokens.module';
     LoginPageModule,
     RegisterPageModule,
     RegisterStep2PageModule,
+    OfferPageModule
   ]
 })
 export class PagesModule {}

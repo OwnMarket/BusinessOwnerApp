@@ -9,20 +9,13 @@
                 </ion-thumbnail>
             <a href="javascript:;" 
                 (click)="openPage('BusinessProfilePage')" 
-                item-title menuClose text-center>
+                item-title menuClose text-center style="bottom: 60px;width: 98%;position: absolute">
                 {{params.title}}
             </a>
     </ion-header>
     <!-- Menu Main List -->
     <ion-content main-menu>
         <ion-list no-margin no-padding>
-          <button menuClose ion-item paddinge-left no-lines item-title 
-            (click)="openPage('AccountPage')">
-              <ion-icon icon-small item-left>
-                  <i class="fa fa-home"></i>
-              </ion-icon>
-              Account
-          </button>
           <button menuClose ion-item paddinge-left no-lines item-title 
             (click)="openPage('TokensPage')">
               <ion-icon icon-small item-left>
@@ -43,6 +36,13 @@
                   <i class="fa fa-address-book"></i>
               </ion-icon>
               Investors
+          </button>
+          <button menuClose ion-item paddinge-left no-lines item-title 
+            (click)="openPage('AccountPage')">
+              <ion-icon icon-small item-left>
+                  <i class="fa fa-home"></i>
+              </ion-icon>
+              Account
           </button>
           <button menuClose ion-item paddinge-left no-lines item-title 
             (click)="openPage('HelpPage')">

@@ -31,20 +31,4 @@ export class ParallaxLayout4 {
     }
     this.onEvent("onRates", index, e);
   };
-
-  ngOnChanges(changes: { [propKey: string]: any }) {
-    this.subscribeToIonScroll();
-  }
-
-  ngAfterViewInit() {
-    this.subscribeToIonScroll();
-  }
-
-  subscribeToIonScroll() {
-    if (this.content != null && this.content.ionScroll != null) {
-      this.content.ionScroll.subscribe((d) => {
-        this.fabButton.setElementClass("fab-button-out", d.directionY == "down");
-      });
-    }
-  }
 }

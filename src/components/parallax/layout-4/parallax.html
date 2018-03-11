@@ -9,21 +9,14 @@
             <!--Parallax Rateing-->
             <ion-col col-12>
                 <ion-item no-lines header-bcg no-padding>
-                    <ion-icon text-center white *ngFor="let item of data.iconsStars;let i = index" (click)="onStarClass(data.iconsStars, i, $event)">
-                        <i icon-medium *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>
-                        <i icon-medium *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>
-                    </ion-icon>
-                    <div span-small text-center margin-bottom>{{data.reviews}}</div>
-                    <!--Parallax Title-->
+                    <div class="progressBar">
+                        <div class="loader" style="width: 73%;background-color: white;">
+                            <p class="percent">73%</p>
+                        </div>
+                    </div>
                     <h1 parallax-title text-center margin-top>{{data.title}}</h1>
                     <!--- Social Share-->
                     <div social text-right margin-top>
-                        <ion-icon icon-small white (click)="onEvent('onLike', data)">
-                            <i class="icon {{data.iconLike}}"></i>
-                        </ion-icon>
-                        <ion-icon icon-small white (click)="onEvent('onFavorite', data)">
-                            <i class="icon {{data.iconFavorite}}"></i>
-                        </ion-icon>
                         <ion-icon icon-small white (click)="onEvent('onShare', data)">
                             <i class="icon {{data.iconShare}}"></i>
                         </ion-icon>
@@ -50,9 +43,3 @@
         </ion-row>
     </ion-grid>
 </ion-content>
-<!-- Fab Button -->
-<ion-fab #fab bottom right>
-    <button button-ion-fab ion-fab (click)="onEvent('onFab', data, $event)">
-    <ion-icon name="add"></ion-icon>
-  </button>
-</ion-fab>
