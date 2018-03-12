@@ -400,7 +400,7 @@ $icon-size:(
 [button-clear-outline] {
   color: theme-colors('textColors', 'secondary') !important;
   font-size: $h5-font-size !important;
-  border: 1px solid theme-colors('mainColors', 'primary') !important;
+  border: 3px solid theme-colors('mainColors', 'primary') !important;
   padding: 15px 25px !important;
   font-weight: bold !important;
 }
