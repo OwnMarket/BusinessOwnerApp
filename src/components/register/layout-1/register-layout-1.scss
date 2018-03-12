@@ -6,6 +6,10 @@ register-layout-1 {
     @include darkening-blend-mode;
   }
 
+  ion-item{
+    background-color: #000 !important;
+  }
+
   img {
     margin-top: -40px;
   }
@@ -16,7 +20,7 @@ register-layout-1 {
   }
 
   .form {
-    background: #fff;
+    background: #000;
     border-radius: $border-radius;
     box-shadow: $box-shadow-z2;
     padding: 15px;
@@ -40,10 +44,9 @@ register-layout-1 {
     }
 
     [title] {
-      font-size: $h1-font-size;
+      font-size: 14px;
       color: theme-colors('textColors', 'primary');
       text-transform: uppercase;
-      margin: 0 10px;
     }
   }
 
