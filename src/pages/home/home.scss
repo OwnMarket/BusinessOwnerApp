@@ -2,6 +2,22 @@ page-home {
 
 }
 
+.welcome-text{
+    margin-left: 15px;
+}
+
 ion-item{
     font-size: 11px;
+}
+
+ion-fab{
+    display: none !important;
+}
+
+.label-md{
+    margin: 0 !important;
+}
+
+ion-label{
+    font-size: 12px;
 }

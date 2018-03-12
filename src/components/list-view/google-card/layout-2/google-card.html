@@ -19,8 +19,7 @@
                         </div>
                     </ion-card-content>
                     <button ion-button 
-                        margin-bottom margin-top margin-right button-clear-outline 
-                        round outline medium float-right 
+                        margin-bottom margin-top margin-right float-right 
                         (click)="onEvent('onExplore', item, $event)">
                         {{item.button}}
                     </button>
@@ -32,6 +31,6 @@
 <!--Fab Button-->
 <ion-fab #fab bottom right>
         <button button-ion-fab ion-fab (click)="onEvent('onFab', data, $event)">
-        <ion-icon name="add"></ion-icon>
-      </button>
+            <ion-icon name="add"></ion-icon>
+        </button>
 </ion-fab>
