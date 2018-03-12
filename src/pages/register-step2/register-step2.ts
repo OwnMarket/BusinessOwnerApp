@@ -29,7 +29,7 @@ export class RegisterStep2Page {
 
     this.params.data = {
       "register": "Finish your registration",
-      "logo": "assets/images/logo/chainium.png",
+      "logo": "assets/images/logo/chainium-black.jpg",
       "firstName": "First name",
       "lastName": "Last name",
       "businessName": "Business name",
@@ -46,7 +46,7 @@ export class RegisterStep2Page {
 
         userProvider.registerStepTwo(registrationStep2Model)
           .subscribe((res) => {
-            toastr.showMessage("User profile updated!")
+            toastr.success("User profile updated!")
             navCtrl.setRoot(HomePage)
           });
       },

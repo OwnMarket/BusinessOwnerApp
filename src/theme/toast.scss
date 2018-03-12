@@ -1,3 +1,7 @@
-.toast-success{
-    background-color: #69BB7B !important;
+ion-toast.success .toast-wrapper {
+	background: green;
+}
+
+ion-toast.error .toast-wrapper {
+	background: rgb(209, 71, 71);
 }

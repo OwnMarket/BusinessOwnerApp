@@ -8,23 +8,19 @@
 </ion-header>
 
 <ion-content>
-  <p class="welcome-text">Hello Yablan</p>
+  <p class="welcome-text">Hello</p>
         <ion-list no-border>
-                <ion-item>
-                  Confirm your email address
-                  <ion-icon name='checkmark' item-end color="favorite"></ion-icon>
-                </ion-item>
-                <ion-item>
+                <ion-item (click)="openPage('AccountPage')">
                   Complete your personal profile
                   <ion-icon name='checkmark' item-end color="favorite"></ion-icon>
                 </ion-item>
-                <ion-item>
+                <ion-item (click)="openPage('BusinessOwnerPage')">
                   Complete your business profile
-                  <ion-icon name='close' item-end color="danger"></ion-icon>
+                  <ion-icon name='checkmark' item-end color="favorite"></ion-icon>
                 </ion-item>
-                <ion-item>
+                <ion-item (click)="openPage('BusinessEvaluationPage')">
                   Value your business
-                  <ion-icon name='close' item-end color="danger"></ion-icon>
+                  <ion-icon name='checkmark' item-end color="favorite"></ion-icon>
                 </ion-item>
               </ion-list> 
               <p class="welcome-text">Current offers</p>
@@ -34,4 +30,4 @@
                   [events]="params.events">
                 </google-card-layout-2>
             </ion-content>
-</ion-content>
+</ion-content> 

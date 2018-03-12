@@ -7,6 +7,10 @@ register-layout-1 {
   }
 
   img {
+    margin-top: -40px;
+  }
+
+  img {
     max-width: 50px;
     max-height: 50px;
   }
@@ -26,6 +30,13 @@ register-layout-1 {
 
     [button-clear] {
       margin-top: 15px;
+    }
+
+    [button-clear-outline] {
+      margin-top: 10%;
+      width: 48.3%;
+      display: block;
+      float: left;
     }
 
     [title] {

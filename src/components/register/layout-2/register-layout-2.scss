@@ -1,13 +1,8 @@
 /*  #Style Register + Image
 ================================================*/
 register-layout-2 {
-  [logo] {
-      overflow: hidden;
-  }
-
   img {
-    max-width: 250px;
-    display: block;
+    margin-top: -40px;
   }
 
   .form {
@@ -29,6 +24,13 @@ register-layout-2 {
 
     [button-clear] {
       margin-top: 15px;
+    }
+
+    [button-clear-outline] {
+      margin-top: 10%;
+      width: 48.3%;
+      display: block;
+      float: left;
     }
 
     [title] {

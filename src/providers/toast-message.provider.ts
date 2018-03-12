@@ -14,13 +14,35 @@ export class ToastMessageProvider {
     console.log('Hello ToastMessageProvider Provider');
   }
 
-  showMessage(message: string){
-    let toastSuccess = this.toast.create({
+  private showMessage(cssClass: string, message: string){
+    let toastMsg = this.toast.create({
       message: message,
       duration: 3000,
-      position: 'top'
+      position: 'top',
+      cssClass: cssClass
     });
 
-    toastSuccess.present();
+    toastMsg.present();
+  }
+
+  success(message: string){
+    this.showMessage('success', message);
+  }
+
+  error(message: string){
+    this.showMessage('error', message);
+  }
+
+  errorAlerts(response: any){
+    response = response.error || response;
+    if(response.alerts && response.alerts.length > 0){
+      let message = '';
+      response.alerts.forEach(alert => {
+        message += ' ' + alert.message;
+      });
+      this.error(message);
+    }else{
+      this.error('Something went wrong. Please check your data!')
+    }
   }
 }

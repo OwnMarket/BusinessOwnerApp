@@ -40,8 +40,7 @@ export class LoginPage {
           .subscribe((res) => {
             navCtrl.setRoot(HomePage)
           }, (res) => {
-            _toastr.showMessage("Wrong credentials!");
-            console.log(res);
+            _toastr.error("Wrong credentials!");
           });
       },
       onRegister: function (params) {

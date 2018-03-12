@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 
@@ -15,6 +15,8 @@ import { ToastMessageProvider } from './toast-message.provider';
 export class UserProvider {
   private _isLoggedIn: boolean;
   private readonly _resourceUrl: string;
+  @Output() logout_event: EventEmitter<any> = new EventEmitter<any>();
+
   constructor(
     private http: HttpClient,
     private appConfig: AppConfigProvider) {
@@ -39,6 +41,7 @@ export class UserProvider {
 
   logout(): boolean{
     sessionStorage.removeItem('access_token');
+    this.logout_event.emit();
     return true;
   }
 

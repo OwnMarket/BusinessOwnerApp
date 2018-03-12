@@ -6,6 +6,7 @@ import { UserProvider } from '../../providers/user.provider';
 import { UserRegistrationModel } from '../../models/user-registration.model';
 import { LoginModel } from '../../models/login.model';
 import { RegisterStep2Page } from '../register-step2/register-step2';
+import { ToastMessageProvider } from '../../providers/toast-message.provider';
 
 @IonicPage()
 @Component({
@@ -17,12 +18,13 @@ export class RegisterPage {
 
   constructor(
     navCtrl: NavController, 
+    toastr: ToastMessageProvider,
     private menuCtrl: MenuController,
     userProvider: UserProvider) {
 
     this.params.data = {
       "register": "Join Chainium",
-      "logo": "assets/images/logo/chainium.png",
+      "logo": "assets/images/logo/chainium-black.jpg",
       "iconAccount": "icon-account",
       "username": "Username",
       "iconHome": "icon-home-variant",
@@ -57,6 +59,9 @@ export class RegisterPage {
                 .subscribe((res) => {
                   navCtrl.setRoot(RegisterStep2Page)
                 });
+            }, (errorResponse) => {
+              console.log(errorResponse);
+              toastr.errorAlerts(errorResponse);
             });
         }
       },

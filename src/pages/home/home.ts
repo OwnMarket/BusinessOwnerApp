@@ -4,6 +4,8 @@ import { ToastMessageProvider } from '../../providers/toast-message.provider';
 import { IonicPage, NavController } from 'ionic-angular';
 import { OfferProvider } from '../../providers/offer.provider';
 import { OfferPage } from '../offer/offer';
+import { AccountPage } from '../account/account';
+import { BusinessProfilePage } from '../business-profile/business-profile';
 
 @IonicPage()
 @Component({
@@ -12,9 +14,9 @@ import { OfferPage } from '../offer/offer';
 })
 export class HomePage {
   params: any = {};
-
+  
   constructor(
-    navCtrl: NavController,
+    private navCtrl: NavController,
     offerProvider: OfferProvider) {
     this.params.data = offerProvider.getOffers();
 
@@ -26,6 +28,19 @@ export class HomePage {
             navCtrl.push(OfferPage);
         }
     };
+  }
+
+  openPage(pageName){
+    switch(pageName){
+      case AccountPage.name:
+        this.navCtrl.push(AccountPage);
+        break;
+      case BusinessProfilePage.name:
+        this.navCtrl.push(BusinessProfilePage);
+        break;
+      default:
+        //do nothing
+    }
   }
 
   ngOnInit(){}

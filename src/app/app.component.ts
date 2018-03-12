@@ -20,6 +20,7 @@ export class BusinessOwnerApp {
   @ViewChild('content') nav: NavController
   rootPage:any = HomePage;
   params: any;
+  subscription: any;
 
   constructor(
     private _userProvider: UserProvider,
@@ -69,6 +70,14 @@ export class BusinessOwnerApp {
       default:
         this.nav.popToRoot();
     }
+  }
+
+  ngOnInit() {
+    this.subscription = this._userProvider.logout_event
+      .subscribe(item => this.nav.setRoot(LoginPage));
+  }
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
 

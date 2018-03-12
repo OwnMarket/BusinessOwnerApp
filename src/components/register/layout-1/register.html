@@ -23,8 +23,22 @@
                         <ion-input required type="text" [(ngModel)]="businessName"></ion-input>
                     </ion-item>
 
-                    <button ion-button float-right clear button-clear (click)="onEvent('onRegister')">{{data.submit}}</button>
-                    <button ion-button float-left clear button-clear (click)="onEvent('onSkip')">{{data.skip}}</button>
+                    <button ion-button 
+                        float-right 
+                        button-clear-outline 
+                        round 
+                        outline 
+                        (click)="onEvent('onRegister')">
+                        {{data.submit}}
+                    </button>
+                    <button ion-button 
+                        float-left 
+                        button-clear-outline 
+                        round 
+                        outline  
+                        (click)="onEvent('onSkip')">
+                        {{data.skip}}
+                    </button>
                 </div>
             </ion-col>
         </ion-row>
