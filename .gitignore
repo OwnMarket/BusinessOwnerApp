@@ -1,4 +1,6 @@
 node_modules
 www
+plugins
+platforms
 .sourcemaps
 package-lock.json

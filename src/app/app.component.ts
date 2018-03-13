@@ -30,7 +30,7 @@ export class BusinessOwnerApp {
     
       platform.ready().then(() => {
         statusBar.styleDefault();
-        splashScreen.show();
+        splashScreen.hide();
         this.params = {
           "background": "assets/images/25.jpg",
           "image": "assets/images/header-logo.png",
