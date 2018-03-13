@@ -1,9 +1,64 @@
 <ion-header>
-    <ion-navbar header-color>
-        <ion-title text-left>Business Profile</ion-title>
-    </ion-navbar>
-  </ion-header>
-  
-  <ion-content padding="true">
-    Business
-  </ion-content>
+  <ion-navbar header-color>
+    <ion-title text-left>Business Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding="true">
+  <ion-item no-padding>
+    <ion-label floating>Name</ion-label>
+    <ion-input required type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>Description</ion-label>
+    <ion-textarea required type="text" [(ngModel)]="description"></ion-textarea>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>Country</ion-label>
+    <ion-input required type="text" [(ngModel)]="country"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>Year founded</ion-label>
+    <ion-input required type="text" [(ngModel)]="yearFounded"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>Employees</ion-label>
+    <ion-input required type="text" [(ngModel)]="employeeCountRange"></ion-input>
+  </ion-item>
+  <ion-item no-padding>
+    <ion-label floating>Street</ion-label>
+    <ion-input required type="text" [(ngModel)]="addressStreet"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>Post code</ion-label>
+    <ion-input required type="text" [(ngModel)]="addressPostCode"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>City</ion-label>
+    <ion-input required type="text" [(ngModel)]="addressCity"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>Region</ion-label>
+    <ion-input required type="text" [(ngModel)]="addressRegion"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>Country</ion-label>
+    <ion-input required type="text" [(ngModel)]="addressCountry"></ion-input>
+  </ion-item>
+
+  <ion-item no-padding>
+    <ion-label floating>Website</ion-label>
+    <ion-input required type="text" [(ngModel)]="website"></ion-input>
+  </ion-item>
+
+  <button ion-button float-right button-clear-outline round outline (click)="save()">
+    Save
+  </button>
+</ion-content>
