@@ -8,64 +8,46 @@
                     <img [src]="data.logo" *ngIf="data.logo != null" />
                 </div>
                 <!--End logo-->
-                <!--Form-->
-                <div class="form">
-                    <ion-item no-padding transparent>
-                        <!--Icon for email-->
-                        <ion-icon item-left>
-                            <i icon-small class="icon {{data.iconEmail}}"></i>
-                        </ion-icon>
-                        <!---Input field email-->
-                        <ion-label floating>{{data.email}}</ion-label>
-                        <ion-input 
-                            required type="email" 
-                            pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" 
-                            required [(ngModel)]="email">
-                        </ion-input>
-                    </ion-item>
-                    <ion-item no-padding transparent>
-                        <!--Icon for password-->
-                        <ion-icon item-left>
-                            <i icon-small class="icon {{data.iconLock}}"></i>
-                        </ion-icon>
-                        <!---Input field password-->
-                        <ion-label floating>{{data.password}}</ion-label>
-                        <ion-input required 
-                            type="password" 
-                            [(ngModel)]="password">
-                        </ion-input>
-                    </ion-item>
-                    <ion-item no-padding transparent>
-                        <!--Icon for password-->
-                        <ion-icon item-left>
-                            <i icon-small class="icon {{data.iconLock}}"></i>
-                        </ion-icon>
-                        <!---Input field password-->
-                        <ion-label floating>{{data.confirmPassword}}</ion-label>
-                        <ion-input required 
-                            type="password" 
-                            [(ngModel)]="confirmPassword">
-                        </ion-input>
-                    </ion-item>
-                    <!---Register button-->
-                    <button ion-button 
-                        float-right 
-                        button-clear-outline 
-                        round 
-                        outline  
-                        (click)="onEvent('onRegister')">
-                        {{data.submit}}
-                    </button>
+                <ion-item no-padding transparent>
+                    <ion-label floating>{{data.email}}</ion-label>
+                    <ion-input 
+                        required type="email" 
+                        pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" 
+                        required [(ngModel)]="email">
+                    </ion-input>
+                </ion-item>
+                <ion-item no-padding transparent>
+                    <ion-label floating>{{data.password}}</ion-label>
+                    <ion-input required 
+                        type="password" 
+                        [(ngModel)]="password">
+                    </ion-input>
+                </ion-item>
+                <ion-item no-padding transparent>
+                    <ion-label floating>{{data.confirmPassword}}</ion-label>
+                    <ion-input required 
+                        type="password" 
+                        [(ngModel)]="confirmPassword">
+                    </ion-input>
+                </ion-item>
+                <!---Register button-->
+                <button ion-button 
+                    float-right 
+                    button-clear-outline 
+                    round 
+                    outline  
+                    (click)="onEvent('onRegister')">
+                    {{data.submit}}
+                </button>
 
-                    <button ion-button 
-                        float-left 
-                        button-clear-outline 
-                        round 
-                        outline 
-                        (click)="onEvent('onSkip')">
-                        Back
-                    </button>
-                </div>
+                <button ion-button 
+                    float-left 
+                    button-clear-outline 
+                    round 
+                    outline 
+                    (click)="onEvent('onSkip')">
+                    Back
+                </button>
             </ion-col>
         </ion-row>
     </ion-grid>

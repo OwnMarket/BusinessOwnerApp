@@ -7,15 +7,15 @@ import { UserProvider } from '../../providers/user.provider';
 })
 export class AccountPage {
   params: any = {};
+  
   constructor(
-    private _userProvider: UserProvider
-  ) {
-      this.params.subtitle = "";
-      this.params.description = "";
+    private _userProvider: UserProvider) {
+    this.params.subtitle = "";
+    this.params.description = "";
 
-      this.params.data = [
-        { page: "ProfilePage", title: "Profile page" },
-        { page: "SecuritySettingsPage", title: "Security settings page" }
-      ];
+    this.params.data = [
+      { page: "ProfilePage", title: "Profile" },
+      { page: "SecuritySettingsPage", title: "Security settings" }
+    ];
   }
 }

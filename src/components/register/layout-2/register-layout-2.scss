@@ -1,43 +1,29 @@
 /*  #Style Register + Image
 ================================================*/
 register-layout-2 {
+  ion-col {
+    position: relative;
+
+    [button-clear] {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+
   img {
     margin-top: -40px;
   }
 
-  .form {
-    padding: 10px;
-    overflow: hidden;
+  .item-inner {
+    border-bottom-color: theme-colors('mainColors', 'primary') !important;
+    box-shadow: none !important;
+  }
 
-    .item-inner {
-        margin-left: 10px !important;
-    }
-
-    .item-md ion-icon[item-left] {
-      margin: 25px 0 0;
-    }
-
-    .item-inner {
-      border-bottom-color: theme-colors('mainColors', 'primary') !important;
-      box-shadow: none !important;
-    }
-
-    [button-clear] {
-      margin-top: 15px;
-    }
-
-    [button-clear-outline] {
-      margin-top: 10%;
-      width: 48.3%;
-      display: block;
-      float: left;
-    }
-
-    [title] {
-      font-size: $h1-font-size;
-      color: theme-colors('textColors', 'primary');
-      text-transform: uppercase;
-      margin: 0 10px;
-    }
+  [button-clear-outline] {
+    margin-top: 10%;
+    width: 48.3%;
+    display: block;
+    float: left;
   }
 }

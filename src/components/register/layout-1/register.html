@@ -3,43 +3,40 @@
     <ion-grid *ngIf="data != null">
         <ion-row wrap padding>
             <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
-                <!--Form-->
-                <div class="form">
-                    <!--Form Title-->
-                    <h3 title>{{data.register}}</h3>
-                    
-                    <ion-item no-padding>
-                        <ion-label floating>{{data.firstName}}</ion-label>
-                        <ion-input required type="text" [(ngModel)]="firstName"></ion-input>
-                    </ion-item>
-
-                    <ion-item no-padding>
-                        <ion-label floating>{{data.lastName}}</ion-label>
-                        <ion-input required type="text" [(ngModel)]="lastName"></ion-input>
-                    </ion-item>
-                    
-                    <ion-item no-padding>
-                        <ion-label floating>{{data.businessName}}</ion-label>
-                        <ion-input required type="text" [(ngModel)]="businessName"></ion-input>
-                    </ion-item>
-
-                    <button ion-button 
-                        float-right 
-                        button-clear-outline 
-                        round 
-                        outline 
-                        (click)="onEvent('onRegister')">
-                        {{data.submit}}
-                    </button>
-                    <button ion-button 
-                        float-left 
-                        button-clear-outline 
-                        round 
-                        outline  
-                        (click)="onEvent('onSkip')">
-                        {{data.skip}}
-                    </button>
+                <div logo>
+                    <img [src]="data.logo" *ngIf="data.logo != null" />
                 </div>
+                <ion-item no-padding>
+                    <ion-label floating>{{data.firstName}}</ion-label>
+                    <ion-input required type="text" [(ngModel)]="firstName"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding>
+                    <ion-label floating>{{data.lastName}}</ion-label>
+                    <ion-input required type="text" [(ngModel)]="lastName"></ion-input>
+                </ion-item>
+                
+                <ion-item no-padding>
+                    <ion-label floating>{{data.businessName}}</ion-label>
+                    <ion-input required type="text" [(ngModel)]="businessName"></ion-input>
+                </ion-item>
+
+                <button ion-button 
+                    float-right 
+                    button-clear-outline 
+                    round 
+                    outline 
+                    (click)="onEvent('onRegister')">
+                    {{data.submit}}
+                </button>
+                <button ion-button 
+                    float-left 
+                    button-clear-outline 
+                    round 
+                    outline  
+                    (click)="onEvent('onSkip')">
+                    {{data.skip}}
+                </button>
             </ion-col>
         </ion-row>
     </ion-grid>
