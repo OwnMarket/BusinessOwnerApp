@@ -19,21 +19,21 @@ export class BusinessProfilePage {
   profile: BusinessProfileModel = new BusinessProfileModel();
 
   constructor(
-    private businessProvider: BusinessProvider,
-    private toastr: ToastMessageProvider) {
+    private _businessProvider: BusinessProvider,
+    private _toastr: ToastMessageProvider) {
   }
 
   save(){
-    this.businessProvider.updateProfile(this.profile)
+    this._businessProvider.updateProfile(this.profile)
       .subscribe((data) => {
-        this.toastr.success('Business profile updated!');
+        this._toastr.success('Business profile updated!');
       }, (err) => {
-        this.toastr.errorAlerts(err);
+        this._toastr.errorAlerts(err);
       });
   }
 
   ngOnInit(){
-    this.businessProvider.getProfile()
+    this._businessProvider.getProfile()
       .subscribe((data) => {
         this.profile = data;
       }, (res) => {
