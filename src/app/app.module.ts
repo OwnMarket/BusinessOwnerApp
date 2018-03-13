@@ -16,6 +16,7 @@ import { BusinessProvider } from '../providers/business.provider';
 import { TokenInterceptor } from './token.interceptor';
 import { ToastMessageProvider } from '../providers/toast-message.provider';
 import { TokenProvider } from '../providers/token.provider';
+import { LoadingProvider } from '../providers/loading.provider';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { TokenProvider } from '../providers/token.provider';
     UserProvider,
     BusinessProvider,
     ToastMessageProvider,
-    TokenProvider
+    TokenProvider,
+    LoadingProvider
   ]
 })
 export class AppModule {}
