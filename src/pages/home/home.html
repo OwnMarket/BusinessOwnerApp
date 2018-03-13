@@ -1,33 +1,27 @@
 <ion-header>
-    <ion-navbar header-color>
-        <button ion-button menuToggle>
-          <ion-icon class="icon-menu" name="menu"></ion-icon>
-        </button>
-        <ion-title text-left>Dashboard</ion-title>
-    </ion-navbar>
+  <ion-navbar header-color>
+    <button ion-button menuToggle>
+      <ion-icon class="icon-menu" name="menu"></ion-icon>
+    </button>
+    <ion-title text-left>Dashboard</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <p class="welcome-text">Hello</p>
-        <ion-list no-border>
-                <ion-item (click)="openPage('AccountPage')">
-                  Complete your personal profile
-                  <ion-icon name='checkmark' item-end color="favorite"></ion-icon>
-                </ion-item>
-                <ion-item (click)="openPage('BusinessOwnerPage')">
-                  Complete your business profile
-                  <ion-icon name='checkmark' item-end color="favorite"></ion-icon>
-                </ion-item>
-                <ion-item (click)="openPage('BusinessEvaluationPage')">
-                  Value your business
-                  <ion-icon name='checkmark' item-end color="favorite"></ion-icon>
-                </ion-item>
-              </ion-list> 
-              <p class="welcome-text">Current offers</p>
-              <ion-content>
-                <google-card-layout-2 
-                  [data]="params.data" 
-                  [events]="params.events">
-                </google-card-layout-2>
-            </ion-content>
-</ion-content> 
+  <p class="welcome-text">Hello {{ profile.firstName }}</p>
+  <ion-list no-border>
+    <ion-item (click)="openPage('AccountPage')">
+      Personal profile
+      <ion-icon name='arrow-dropright' item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="openPage('BusinessProfilePage')">
+      Business profile
+      <ion-icon name='arrow-dropright' item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+  <p class="welcome-text">Current offers</p>
+  <ion-content>
+    <google-card-layout-2 [data]="params.data" [events]="params.events">
+    </google-card-layout-2>
+  </ion-content>
+</ion-content>

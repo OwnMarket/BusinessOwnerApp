@@ -18,13 +18,4 @@ export class AccountPage {
         { page: "SecuritySettingsPage", title: "Security settings page" }
       ];
   }
-
-  ngOnInit(){
-    this._userProvider.getProfile()
-      .subscribe((data) => {
-        let profile = data;
-      }, (res) => {
-        console.log(res);
-      });
-  }
 }

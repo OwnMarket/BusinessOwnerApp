@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BusinessProvider } from '../../providers/business.provider';
 
 /**
  * Generated class for the BusinessProfilePage page.
@@ -13,12 +14,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'business-profile.html',
 })
 export class BusinessProfilePage {
+  profile: any = {};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    private businessProvider: BusinessProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad BusinessProfilePage');
+  save(){
+
   }
 
+  ngOnInit(){
+    this.businessProvider.getProfile()
+      .subscribe((data) => {
+        this.profile = data;
+      }, (res) => {
+        console.log(res);
+      });
+  }
 }

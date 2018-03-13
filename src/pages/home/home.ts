@@ -6,6 +6,7 @@ import { OfferProvider } from '../../providers/offer.provider';
 import { OfferPage } from '../offer/offer';
 import { AccountPage } from '../account/account';
 import { BusinessProfilePage } from '../business-profile/business-profile';
+import { UserProfileModel } from '../../models/user-profile.model';
 
 @IonicPage()
 @Component({
@@ -14,10 +15,12 @@ import { BusinessProfilePage } from '../business-profile/business-profile';
 })
 export class HomePage {
   params: any = {};
-  
+  profile: any = {};
+
   constructor(
     private navCtrl: NavController,
-    offerProvider: OfferProvider) {
+    offerProvider: OfferProvider,
+    private userProvider: UserProvider) {
     this.params.data = offerProvider.getOffers();
 
     this.params.events = {
@@ -43,5 +46,12 @@ export class HomePage {
     }
   }
 
-  ngOnInit(){}
+  ngOnInit(){
+    this.userProvider.getProfile()
+      .subscribe((data) => {
+        this.profile = data;
+      }, (res) => {
+        console.log(res);
+      });
+  }
 }

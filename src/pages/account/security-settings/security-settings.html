@@ -1,21 +1,27 @@
-<!---Settings TAB lauout-1-->
 <ion-content>
   <div>
-    <ion-item>
-      <ion-label>Current password</ion-label>
+    <ion-item no-padding>
+      <ion-label floating>Current password</ion-label>
       <ion-input required type="password" [(ngModel)]="currentPassword"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label>New password</ion-label>
+    <ion-item no-padding>
+      <ion-label floating>Password</ion-label>
       <ion-input required type="password" [(ngModel)]="newPassword"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label>Current password</ion-label>
-      <ion-input required type="password" [(ngModel)]="newPasswordConfirm"></ion-input>
+    <ion-item no-padding>
+      <ion-label floating>Confirm password</ion-label>
+      <ion-input required type="password" [(ngModel)]="confirmPassword"></ion-input>
     </ion-item>
 
-    <button ion-button float-right (click)="changePassword()">Save</button>
+    <button ion-button 
+      float-right 
+      button-clear-outline 
+      round 
+      outline 
+      (click)="changePassword()">
+      Save
+    </button>
   </div>
 </ion-content>

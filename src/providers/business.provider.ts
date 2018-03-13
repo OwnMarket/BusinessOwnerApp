@@ -19,6 +19,9 @@ export class BusinessProvider {
   getProfile(): Observable<any> {
     return this.http
       .get(this._resourceUrl + 'profile')
+      .map((res: any) => {
+        return res.data;
+      });
   }
 
   updateProfile(model: BusinessProfileModel): Observable<any> {
