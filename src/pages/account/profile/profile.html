@@ -1,39 +1,39 @@
 <ion-content>
   <div>
-    <ion-item no-padding>
+    <ion-item padding>
       <ion-label floating>First name</ion-label>
       <ion-input required type="text" [(ngModel)]="profile.firstName"></ion-input>
     </ion-item>
 
-    <ion-item no-padding>
+    <ion-item padding>
       <ion-label floating>Last name</ion-label>
       <ion-input required type="text" [(ngModel)]="profile.lastName"></ion-input>
     </ion-item>
 
-    <ion-item no-padding>
+    <ion-item padding>
       <ion-label floating>Company position</ion-label>
       <ion-input required type="text" [(ngModel)]="profile.companyPosition"></ion-input>
     </ion-item>
 
-    <ion-item no-padding>
+    <ion-item padding>
       <ion-label floating>Date of birth</ion-label>
-      <ion-input required type="text" [(ngModel)]="profile.dateOfBirth"></ion-input>
+      <ion-datetime displayFormat="DD.MM.YYYY" [(ngModel)]="profile.dateOfBirth"></ion-datetime>
     </ion-item>
 
-    <ion-item no-padding>
+    <ion-item padding>
       <ion-label floating>Language</ion-label>
       <ion-input required type="text" [(ngModel)]="profile.language"></ion-input>
     </ion-item>
-    <ion-item no-padding>
+    <ion-item padding>
       <ion-label floating>Phone</ion-label>
       <ion-input required type="text" [(ngModel)]="profile.phone"></ion-input>
     </ion-item>
 
-    <ion-item no-padding>
+    <ion-item padding>
       <ion-label floating>Tax residency</ion-label>
       <ion-input required type="text" [(ngModel)]="profile.taxResidency"></ion-input>
     </ion-item>
-
+    <br/>
     <button ion-button float-right button-clear-outline round outline (click)="save()">
       Save
     </button>
