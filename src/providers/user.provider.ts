@@ -34,13 +34,13 @@ export class UserProvider {
           }
         })
         .map((res: any) => {
-          sessionStorage.setItem('access_token', res.access_token);
+          localStorage.setItem('access_token', res.access_token);
           return true;
         });
   }
 
   logout(): boolean{
-    sessionStorage.removeItem('access_token');
+    localStorage.removeItem('access_token');
     this.logout_event.emit();
     return true;
   }
@@ -74,7 +74,7 @@ export class UserProvider {
   }
 
   getToken(): string{
-    return sessionStorage.getItem('access_token');
+    return localStorage.getItem('access_token');
   }
 
   private encodeParams(params: any): string {  
