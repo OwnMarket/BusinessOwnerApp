@@ -19,49 +19,49 @@ export class InvestorsProvider {
       "items": [
           {
               "id": 1,
-              "title": "Jessica Miles",
+              "title": "Jes Miles",
               "image": "assets/images/avatar-small/0.jpg",
-              "description": "Number of shares: 1984",
-              "shortDescription": "Equity (%): 12",
-              "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-              "iconFavorite": "icon-email"
-          },
-          {
-              "id": 2,
-              "title": "Natasha Gamble",
-              "image": "assets/images/avatar-small/1.jpg",
-              "description": "Number of shares: 1980",
-              "shortDescription": "Equity (%): 12",
-              "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
-              "iconFavorite": "icon-email"
-          },
-          {
-              "id": 3,
-              "title": "Julia Petersen",
-              "image": "assets/images/avatar-small/2.jpg",
-              "description": "Number of shares: 1984",
-              "shortDescription": "Equity (%): 12",
-              "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+              "description": "Number of shares: 40",
+              "shortDescription": "Equity (%): 8",
+              "longDescription": "",
               "iconFavorite": "icon-email"
           },
           {
               "id": 4,
               "title": "Marisa Cain",
               "image": "assets/images/avatar-small/3.jpg",
-              "description": "Number of shares: 1984",
-              "shortDescription": "Equity (%): 12",
-              "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+              "description": "Number of shares: 30",
+              "shortDescription": "Equity (%): 6",
+              "longDescription": "",
               "iconFavorite": "icon-email"
+          },
+          {
+            "id": 3,
+            "title": "Julio Petersen",
+            "image": "assets/images/avatar-small/2.jpg",
+            "description": "Number of shares: 15",
+            "shortDescription": "Equity (%): 3",
+            "longDescription": "",
+            "iconFavorite": "icon-email"
           },
           {
               "id": 5,
               "title": "Lara Lynn",
               "image": "assets/images/avatar-small/4.jpg",
-              "description": "Number of shares: 1984",
-              "shortDescription": "Equity (%): 12",
-              "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+              "description": "Number of shares: 8",
+              "shortDescription": "Equity (%): 1.6",
+              "longDescription": "",
               "iconFavorite": "icon-email"
-          }
+          },
+          {
+            "id": 2,
+            "title": "Natasha Gamble",
+            "image": "assets/images/avatar-small/1.jpg",
+            "description": "Number of shares: 7",
+            "shortDescription": "Equity (%): 1.4",
+            "longDescription": "",
+            "iconFavorite": "icon-email"
+        },
       ]
     };
   }
@@ -71,19 +71,19 @@ export class InvestorsProvider {
 
     chartModel.doughnutChartLabels = [
       'Big Company Coffee Co', 
-      'Test owner 1',
-      'Test owner 2',
-      'Test owner 3',
-      'Test owner 4',
-      'Test owner 5'
+      'Jes Miles',
+      'Marisa Cain',
+      'Julio Petersen',
+      'Lara Lynn',
+      'Natasha Gamble'
     ];
     chartModel.doughnutChartData = [
-      800,
-      90,
-      10,
+      400,
+      40,
       30,
-      45,
-      25
+      15,
+      8,
+      7,
     ];
     chartModel.doughnutChartType = 'doughnut';
 
