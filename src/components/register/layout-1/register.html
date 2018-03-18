@@ -6,17 +6,17 @@
                 <div logo>
                     <img [src]="data.logo" *ngIf="data.logo != null" />
                 </div>
-                <ion-item no-padding>
+                <ion-item no-padding transparent>
                     <ion-label floating>{{data.firstName}}</ion-label>
                     <ion-input required type="text" [(ngModel)]="firstName"></ion-input>
                 </ion-item>
 
-                <ion-item no-padding>
+                <ion-item no-padding transparent>
                     <ion-label floating>{{data.lastName}}</ion-label>
                     <ion-input required type="text" [(ngModel)]="lastName"></ion-input>
                 </ion-item>
                 
-                <ion-item no-padding>
+                <ion-item no-padding transparent>
                     <ion-label floating>{{data.businessName}}</ion-label>
                     <ion-input required type="text" [(ngModel)]="businessName"></ion-input>
                 </ion-item>

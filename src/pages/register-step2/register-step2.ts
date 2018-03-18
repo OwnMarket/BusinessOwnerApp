@@ -46,8 +46,10 @@ export class RegisterStep2Page {
 
         userProvider.registerStepTwo(registrationStep2Model)
           .subscribe((res) => {
-            toastr.success("User profile updated!")
-            navCtrl.setRoot(HomePage)
+            toastr.success("User profile updated!");
+            navCtrl.setRoot(HomePage);
+          }, (errorResponse) => {
+            toastr.errorAlerts(errorResponse);
           });
       },
       onSkip: function(params){

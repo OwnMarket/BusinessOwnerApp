@@ -20,7 +20,8 @@ export class OfferProvider {
         {
             "id": 1,
             "title": "Status: active",
-            "titleHeader": "01.03.2018 - 31.03.2018",
+            "titleHeader1": "Big City Coffee Co",
+            "titleHeader2": "01.03.2018 - 31.03.2018",
             "description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock",
             "image": "assets/images/background/1.jpg",
             "button": "View offer"
@@ -31,70 +32,81 @@ export class OfferProvider {
 
   getOffer(){
     return { 
-      "headerImage": "assets/images/background/1.jpg",
+            "headerImage": "assets/images/background/1.jpg",
             "title": "Big City Coffee Co",
             "iconLike": "icon-thumb-up",
             "iconFavorite": "icon-comment",
             "iconShare": "icon-share-variant",
             "reviews": "4.12 (78 reviews)",
             "iconButton": "icon-walk",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-            "description2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.",
-            "description3": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English",
-            "description4": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.",
-            "iconsStars": [
-                {
-                    "isActive": true,
-                    "iconActive": "icon-star-outline",
-                    "iconInactive": "icon-star"
-                },
-                {
-                    "isActive": true,
-                    "iconActive": "icon-star-outline",
-                    "iconInactive": "icon-star"
-                },
-                {
-                    "isActive": true,
-                    "iconActive": "icon-star-outline",
-                    "iconInactive": "icon-star"
-                },
-                {
-                    "isActive": true,
-                    "iconActive": "icon-star-outline",
-                    "iconInactive": "icon-star"
-                },
-                {
-                    "isActive": false,
-                    "iconActive": "icon-star-outline",
-                    "iconInactive": "icon-star"
-                }
-            ],
-            "items": [
+            "description": 
+                "Big City Coffee Co are a chain of 5 cafes in the Greater London area. " +
+                "Our specialities are drinks for food-intolerant customers like gluten-free, dairy-free, sugar-free. " +
+                "We’re so busy that we often have queues outside our cafes and our TripAdvisor ratings are 5 stars." +  
+                "We plan to open cafes across the UK in phase 1 and Europe in phase 2. We need your help!",
+            "offerDetails": [
                 {
                     "id": 1,
-                    "name": "ADDRESS:",
-                    "value": "Boulevard of food, New York, USA"
+                    "name": "Business valuation:",
+                    "value": "£500,000"
                 },
                 {
                     "id": 2,
-                    "name": "PHONE:",
-                    "value": "+555 555 555"
+                    "name": "Current equity ownership (before the  share offer):",
+                    "value": "100% owned by Eva Smith, Owner of Big City Coffee Co"
                 },
                 {
                     "id": 3,
-                    "name": "WEB:",
-                    "value": "www.joesrestaurant.com"
+                    "name": "% of equity to be offered:",
+                    "value": "20%"
                 },
                 {
                     "id": 4,
-                    "name": "MAIL:",
-                    "value": "jimmy@gmail.com"
+                    "name": "Number of shares to be sold:",
+                    "value": "100"
                 },
                 {
                     "id": 5,
-                    "name": "WORKING HOURS:",
-                    "value": "7:00 to 23:00 every day"
+                    "name": "Share price:",
+                    "value": "£1,000"
+                },
+                {
+                    "id": 6,
+                    "name": "Amount of CHX to be held in reserve:",
+                    "value": "£5,000 CHX equivalent"
+                },
+                {
+                    "id": 7,
+                    "name": "Launch date:",
+                    "value": "1st March 2018"
+                },
+                {
+                    "id": 8,
+                    "name": "Closing date:",
+                    "value": "31st March 2018"
                 }
+            ],
+            "businessFacts": [
+                {
+                    "name": "Location",
+                    "value": "UK"
+                },
+                {
+                    "name": "Sector",
+                    "value": "Retail"
+                },
+                {
+                    "name": "Revenue",
+                    "value": "£200,000"
+                },
+                {
+                    "name": "Employees",
+                    "value": "11-50"
+                },
+                {
+                    "name": "Year founded",
+                    "value": "2015"
+                },
             ]
    };
   }

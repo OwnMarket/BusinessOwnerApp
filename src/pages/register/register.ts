@@ -57,12 +57,14 @@ export class RegisterPage {
 
               userProvider.login(loginModel)
                 .subscribe((res) => {
+                  toastr.success("Thank you for registering!");
                   navCtrl.setRoot(RegisterStep2Page)
                 });
             }, (errorResponse) => {
-              console.log(errorResponse);
               toastr.errorAlerts(errorResponse);
             });
+        }else{
+          toastr.error('"Password" and "Confirm password" must match!');
         }
       },
       onSkip: function(params){

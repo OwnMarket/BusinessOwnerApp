@@ -10,7 +10,14 @@ google-card-layout-2 {
         img {
             width: 100% !important;
         }
-        [card-title] {
+        [card-title1] {
+            color: theme-colors('textColors', 'accent-first') !important;
+            position: absolute;
+            left: 16px;
+            bottom: 40px;
+            z-index: 999;
+        }
+        [card-title2] {
             color: theme-colors('textColors', 'accent-first') !important;
             position: absolute;
             left: 16px;

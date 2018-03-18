@@ -6,7 +6,8 @@
                 <ion-card text-left (click)="onEvent('onItemClick', item.title, $event)">
                     <div card-image>
                         <img images-filter src="{{item.image}}" />
-                        <h2 card-title>{{item.titleHeader}}</h2>
+                        <h2 card-title1>{{item.titleHeader1}}</h2>
+                        <h3 card-title2>{{item.titleHeader2}}</h3>
                     </div>
                     <ion-card-content>
                         <ion-card-title>
@@ -18,7 +19,7 @@
                             </div>
                         </div>
                     </ion-card-content>
-                    <button ion-button 
+                    <button ion-button button-clear-outline outline
                         margin-bottom margin-top margin-right float-right 
                         (click)="onEvent('onExplore', item, $event)">
                         {{item.button}}

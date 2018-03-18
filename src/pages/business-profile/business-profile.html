@@ -6,59 +6,49 @@
 <ion-content>
   <ion-item padding>
     <ion-label floating>Name</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.name"></ion-input>
+    <ion-input type="text" [(ngModel)]="profile.Name"></ion-input>
   </ion-item>
 
   <ion-item padding>
     <ion-label floating>Description</ion-label>
-    <ion-textarea required type="text" [(ngModel)]="profile.description"></ion-textarea>
-  </ion-item>
-
-  <ion-item padding>
-    <ion-label floating>Country</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.country"></ion-input>
+    <ion-textarea type="text" [(ngModel)]="profile.Description"></ion-textarea>
   </ion-item>
 
   <ion-item padding>
     <ion-label floating>Year founded</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.yearFounded"></ion-input>
+    <ion-input type="text" [(ngModel)]="profile.YearFounded"></ion-input>
   </ion-item>
 
   <ion-item padding>
     <ion-label floating>Employees</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.employeeCountRange"></ion-input>
+    <ion-input type="text" [(ngModel)]="profile.EmployeeCountRange"></ion-input>
   </ion-item>
   <ion-item padding>
     <ion-label floating>Street</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.addressStreet"></ion-input>
-  </ion-item>
-
-  <ion-item padding>
-    <ion-label floating>Post code</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.addressPostCode"></ion-input>
+    <ion-input type="text" [(ngModel)]="profile.AddressStreet"></ion-input>
   </ion-item>
 
   <ion-item padding>
     <ion-label floating>City</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.addressCity"></ion-input>
+    <ion-input type="text" [(ngModel)]="profile.AddressCity"></ion-input>
   </ion-item>
 
   <ion-item padding>
     <ion-label floating>Region</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.addressRegion"></ion-input>
+    <ion-input type="text" [(ngModel)]="profile.AddressRegion"></ion-input>
   </ion-item>
 
   <ion-item padding>
     <ion-label floating>Country</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.addressCountry"></ion-input>
+    <ion-input type="text" [(ngModel)]="profile.AddressCountry"></ion-input>
   </ion-item>
 
   <ion-item padding>
     <ion-label floating>Website</ion-label>
-    <ion-input required type="text" [(ngModel)]="profile.website"></ion-input>
+    <ion-input type="text" [(ngModel)]="profile.Website"></ion-input>
   </ion-item>
   <br/>
-  <button ion-button float-right button-clear-outline round outline (click)="save()">
+  <button ion-button float-right button-clear-outline outline (click)="save()">
     Save
   </button>
 </ion-content>

@@ -24,20 +24,35 @@ export class BusinessProfilePage {
   }
 
   save(){
+    alert('Comming soon');
+    /* TODO: comming soon
     this._businessProvider.updateProfile(this.profile)
       .subscribe((data) => {
         this._toastr.success('Business profile updated!');
       }, (err) => {
         this._toastr.errorAlerts(err);
       });
+    */
   }
 
   ngOnInit(){
+    this.profile.Name = 'Business City Coffe Co';
+    this.profile.Description = 'Big City Coffee Co provides a cool and friendly meet-up place for food-intolerant customers';
+    this.profile.YearFounded = 2015;
+    this.profile.EmployeeCountRange = '11-50';
+    this.profile.Website = 'www.bigcitycoffee.co.uk';
+    
+    this.profile.AddressStreet = '1 High Street';
+    this.profile.AddressCity = 'London';
+    this.profile.AddressRegion = 'Greater London';
+    this.profile.AddressCountry = 'UK';
+    /* TODO: comming soon
     this._businessProvider.getProfile()
       .subscribe((data) => {
         this.profile = data;
       }, (res) => {
         console.log(res);
       });
+    */
   }
 }
