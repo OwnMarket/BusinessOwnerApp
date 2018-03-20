@@ -21,7 +21,7 @@ export class LoginPage {
     private _toastr: ToastMessageProvider) {
 
     this.params.data = {
-      "username": "Username",
+      "username": "Email",
       "password": "Password",
       "register": "Register",
       "login": "Login",

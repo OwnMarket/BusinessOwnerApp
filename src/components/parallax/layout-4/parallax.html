@@ -10,43 +10,46 @@
             <ion-col col-12>
                 <ion-item no-lines header-bcg no-padding>
                     <h1 parallax-title text-center margin-top>{{data.title}}</h1>
-                    <!--- Social Share-->
-                    <div social text-right margin-top>
-                        <ion-icon icon-small white (click)="onEvent('onShare', data)">
-                            <i class="icon {{data.iconShare}}"></i>
-                        </ion-icon>
-                    </div>
+
                 </ion-item>
             </ion-col>
             <!--Content-->
             <ion-col col-12>
                 <!--Info-->
                 <div class="progressBar">
-                        <div class="loader" style="width: 73%;background-color: white;">
-                            <p class="percent">73%</p>
-                        </div>
+                    <div class="loader" style="width: 73%;background-color: white;">
+                        <p class="percent">73%</p>
                     </div>
+                </div>
                 <ion-item no-lines no-margin padding-right>
-                        <br>
-                    <h2>Here’s a summary of your  share offer</h2>
-                    <div info *ngFor="let item of data.offerDetails;let i = index">
-                        <span float-left>{{item.name}}</span>
-                        <p>{{item.value}}</p>
-                    </div>
+                    <br>
+                    <h2>Here’s a summary of your share offer</h2>
+                    <table>
+                        <tr *ngFor="let item of data.offerDetails;let i = index">
+                            <td class="detailsLabel">
+                                {{item.name}}
+                            </td>
+                            <td text-right>{{item.value}}</td>
+                        </tr>
+                    </table>
                 </ion-item>
-                
+
                 <ion-item no-lines no-margin padding-right>
-                        <br>
-                        <h2>Here are your key business facts</h2>
-                    <div info *ngFor="let item of data.businessFacts;let i = index">
-                        <span float-left>{{item.name}}</span>
-                        <p>{{item.value}}</p>
-                    </div>
+                    <br>
+                    <h2>Here are your key business facts</h2>
+                    <table>
+                        <tr *ngFor="let item of data.businessFacts;let i = index">
+                            <td class="detailsLabel">
+                                {{item.name}}
+                            </td>
+                            <td text-right>{{item.value}}</td>
+                        </tr>
+                    </table>
                 </ion-item>
                 <!-- Description-->
                 <ion-item no-lines text-wrap no-margin padding-right>
-                        <br>
-                        <h2>Offer overview</h2>
+                    <br>
+                    <h2>Offer overview</h2>
                     <h3 parallax-description>{{data.description}}</h3>
                 </ion-item>
             </ion-col>

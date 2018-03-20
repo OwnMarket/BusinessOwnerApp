@@ -52,8 +52,8 @@ export class OfferProvider {
                 },
                 {
                     "id": 2,
-                    "name": "Current equity ownership (before the  share offer):",
-                    "value": "100% owned by Eva Smith, Owner of Big City Coffee Co"
+                    "name": "Current equity ownership:",
+                    "value": "100% owned by Eva Smith"
                 },
                 {
                     "id": 3,

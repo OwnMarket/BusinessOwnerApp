@@ -51,5 +51,21 @@ parallax-layout-4 {
       }
 
     }
+    h2{
+        margin-bottom: 10px !important;
+    }
+    table{
+        width: 100%;
+        table-layout: fixed;
+    }
 
+    table td{
+        word-wrap: break-word;
+        font-size: 11px;
+    }
+
+    .detailsLabel {
+        font-weight: bold;
+        width: 120px;
+    }
 }

@@ -9,6 +9,8 @@
 
 <ion-content>
   <p class="welcome-text">Hello {{ profile.firstName }}</p>
+
+  <p class="welcome-text-2">Complete your profiles</p>
   <ion-list no-border>
     <ion-item (click)="openPage('AccountPage')">
       <ion-icon name="contact"></ion-icon>
@@ -19,7 +21,7 @@
       Business profile
     </ion-item>
   </ion-list>
-  <p class="welcome-text">Current offers</p>
+  <p class="welcome-text-3">Current offers</p>
   <ion-content>
     <google-card-layout-2 [data]="params.data" [events]="params.events">
     </google-card-layout-2>

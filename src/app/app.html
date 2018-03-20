@@ -3,7 +3,7 @@
     <ion-menu [content]="content" *ngIf="params != null" persistent="true">
         <ion-header (click)="openPage('BusinessProfilePage')" header-background-image [ngStyle]="{'background-image': 'url(' + params.background + ')'}">
             <ion-thumbnail>
-                <img [src]="params.image">
+                <!-- <img [src]="params.image"> -->
             </ion-thumbnail>
             <a href="javascript:;" item-title menuClose text-center style="bottom: 60px;width: 98%;position: absolute">
                 {{params.title}}

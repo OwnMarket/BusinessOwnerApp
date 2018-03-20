@@ -14,7 +14,7 @@ export class InvestorsProvider {
     console.log('Hello InvestorsProvider Provider');
   }
 
-  getTopInvestors(){ // TODO load from server
+  getTopInvestors(){ // TODO load from the server
     return {
       "items": [
           {
@@ -23,8 +23,7 @@ export class InvestorsProvider {
               "image": "assets/images/avatar-small/0.jpg",
               "description": "Number of shares: 40",
               "shortDescription": "Equity (%): 8",
-              "longDescription": "",
-              "iconFavorite": "icon-email"
+              "longDescription": ""
           },
           {
               "id": 4,
@@ -32,8 +31,7 @@ export class InvestorsProvider {
               "image": "assets/images/avatar-small/3.jpg",
               "description": "Number of shares: 30",
               "shortDescription": "Equity (%): 6",
-              "longDescription": "",
-              "iconFavorite": "icon-email"
+              "longDescription": ""
           },
           {
             "id": 3,
@@ -41,8 +39,7 @@ export class InvestorsProvider {
             "image": "assets/images/avatar-small/2.jpg",
             "description": "Number of shares: 15",
             "shortDescription": "Equity (%): 3",
-            "longDescription": "",
-            "iconFavorite": "icon-email"
+            "longDescription": ""
           },
           {
               "id": 5,
@@ -50,8 +47,7 @@ export class InvestorsProvider {
               "image": "assets/images/avatar-small/4.jpg",
               "description": "Number of shares: 8",
               "shortDescription": "Equity (%): 1.6",
-              "longDescription": "",
-              "iconFavorite": "icon-email"
+              "longDescription": ""
           },
           {
             "id": 2,
@@ -59,8 +55,7 @@ export class InvestorsProvider {
             "image": "assets/images/avatar-small/1.jpg",
             "description": "Number of shares: 7",
             "shortDescription": "Equity (%): 1.4",
-            "longDescription": "",
-            "iconFavorite": "icon-email"
+            "longDescription": ""
         },
       ]
     };
@@ -85,6 +80,15 @@ export class InvestorsProvider {
       8,
       7,
     ];
+    chartModel.doughnutChartColors = [{ 
+      backgroundColor: [
+          "#ec6608", 
+          "#a4c73c", 
+          "#ff7373", 
+          "#088eec", 
+          "#e8ea5a", 
+          "#819c79"] 
+      }];
     chartModel.doughnutChartType = 'doughnut';
 
     return chartModel;

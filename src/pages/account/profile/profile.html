@@ -19,20 +19,22 @@
       <ion-label floating>Date of birth</ion-label>
       <ion-datetime displayFormat="DD.MM.YYYY" [(ngModel)]="profile.dateOfBirth"></ion-datetime>
     </ion-item>
-
+    <!-- TODO: add later as a dropdown
     <ion-item padding>
       <ion-label floating>Language</ion-label>
       <ion-input type="text" [(ngModel)]="profile.language"></ion-input>
     </ion-item>
+    -->
     <ion-item padding>
       <ion-label floating>Phone</ion-label>
       <ion-input type="text" [(ngModel)]="profile.phone"></ion-input>
     </ion-item>
-
+    <!-- TODO: add later as a dropdown
     <ion-item padding>
       <ion-label floating>Tax residency</ion-label>
       <ion-input type="text" [(ngModel)]="profile.taxResidency"></ion-input>
     </ion-item>
+    -->
     <br/>
     <button ion-button float-right button-clear-outline outline (click)="save()">
       Save

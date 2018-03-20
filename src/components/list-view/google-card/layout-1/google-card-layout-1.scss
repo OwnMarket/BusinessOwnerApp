@@ -3,8 +3,8 @@
 
 google-card-layout-1 {
     .card-img {
-        width: 130px;
-        height: 220px;
+        width: 65px;
+        height: 110px;
         position: relative;
         margin-right: 10px;
     }
@@ -33,5 +33,8 @@ google-card-layout-1 {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+    }
+    .card-content{
+        padding: 0 !important;
     }
 }
