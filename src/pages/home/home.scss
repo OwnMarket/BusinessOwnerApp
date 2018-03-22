@@ -1,5 +1,7 @@
 page-home {
-
+    .item-inner{
+        border: 0 !important;
+    }
 }
 
 .welcome-text{
@@ -12,6 +14,7 @@ page-home {
 }
 
 .welcome-text-3{
+    margin-top: 15px;
     margin-left: 15px;
     font-size: 12px;
     margin-bottom: -2px;
@@ -19,10 +22,6 @@ page-home {
 
 ion-item{
     font-size: 11px;
-}
-
-.item-inner{
-    border: 0 !important;
 }
 
 ion-fab{

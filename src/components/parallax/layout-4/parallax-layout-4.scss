@@ -60,8 +60,11 @@ parallax-layout-4 {
     }
 
     table td{
-        word-wrap: break-word;
+        max-width: 140px;
+        word-break: break-all;
+        white-space: normal;
         font-size: 11px;
+        height: 35px;
     }
 
     .detailsLabel {

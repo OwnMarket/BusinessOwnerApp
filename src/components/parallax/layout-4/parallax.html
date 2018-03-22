@@ -26,10 +26,10 @@
                     <h2>Here’s a summary of your share offer</h2>
                     <table>
                         <tr *ngFor="let item of data.offerDetails;let i = index">
-                            <td class="detailsLabel">
+                            <td valign="center" class="detailsLabel">
                                 {{item.name}}
                             </td>
-                            <td text-right>{{item.value}}</td>
+                            <td valign="center" text-right>{{item.value}}</td>
                         </tr>
                     </table>
                 </ion-item>
@@ -39,10 +39,10 @@
                     <h2>Here are your key business facts</h2>
                     <table>
                         <tr *ngFor="let item of data.businessFacts;let i = index">
-                            <td class="detailsLabel">
+                            <td valign="center" class="detailsLabel">
                                 {{item.name}}
                             </td>
-                            <td text-right>{{item.value}}</td>
+                            <td valign="center" text-right>{{item.value}}</td>
                         </tr>
                     </table>
                 </ion-item>

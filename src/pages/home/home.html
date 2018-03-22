@@ -9,9 +9,10 @@
 
 <ion-content>
   <p class="welcome-text">Hello {{ profile.firstName }}</p>
-
-  <p class="welcome-text-2">Complete your profiles</p>
   <ion-list no-border>
+    <ion-item (click)="openPage('AccountPage')">
+      Complete your profiles
+    </ion-item>
     <ion-item (click)="openPage('AccountPage')">
       <ion-icon name="contact"></ion-icon>
       Personal profile
